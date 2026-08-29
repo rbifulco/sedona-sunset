@@ -128,9 +128,9 @@ For local development, run `pnpm dev`, then open:
 
 <https://spatial-review.alterno.dev/review?site=http%3A%2F%2Flocalhost%3A8099%2F>
 
-After publishing this integration, the production review link is:
+The branch-backed production review link is:
 
-<https://spatial-review.alterno.dev/review?site=https%3A%2F%2Fstarknightt.github.io%2Fsedona-sunset%2F>
+<https://spatial-review.alterno.dev/review?site=https%3A%2F%2Frbifulco.github.io%2Fsedona-sunset%2F>
 
 ## Verification record
 
