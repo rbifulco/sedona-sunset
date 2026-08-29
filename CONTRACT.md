@@ -6,8 +6,9 @@
 Sedona at golden hour. Seven systems — terrain and the wash, the buttes, the juniper, lighting
 and sun, atmosphere, sound, post — built and critiqued over several days. **Every mesh, every
 texture and every sound is generated in code at page load; there is not one asset file in the
-project**, and the only dependency is `three`. That constraint was held completely and it is
-the thing this build is proudest of.
+project**, and `three` is the only rendering dependency. The Spatial Review SDK is a review
+transport and does not participate in the frame. That constraint was held completely and it
+is the thing this build is proudest of.
 
 **What is genuinely good.** The wall rock is the best surface in the project and a critic
 singled it out — `wall_lit` and `sun_gap` are clean at full resolution and `far_270` is the
@@ -142,10 +143,11 @@ a real sunset photograph of Sedona. Not stylized, not low-poly, not "good for a 
 
 ## Hard rules
 
-- **Zero external assets.** No image files, no model files, no audio files, no CDN fetches
-  at runtime. `three` is imported from `node_modules` and served locally; that is the only
-  dependency. Every texture is written into a canvas or a `DataTexture` in code. Every
-  sound is synthesized with the Web Audio API.
+- **Zero external assets.** No image files, model files, or audio files are fetched at
+  runtime. `three` is the only rendering dependency; the Spatial Review SDK and protocol
+  provide the optional review bridge without supplying scene content. Every texture is
+  written into a canvas or a `DataTexture` in code. Every sound is synthesized with the Web
+  Audio API.
 - **No UI and no HUD.** No crosshair, no text, no menus, no debug overlay in the shipped
   frame. Movement and atmosphere only.
 - **No forest and no water.** Exactly one juniper tree is the only significant vegetation,

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@alterno-dev/spatial-review':
+        specifier: ^0.4.0
+        version: 0.4.0(three@0.180.0)
       three:
         specifier: ^0.180.0
         version: 0.180.0
@@ -17,6 +20,14 @@ importers:
         version: 1.62.1
 
 packages:
+
+  '@alterno-dev/spatial-review-protocol@0.4.0':
+    resolution: {integrity: sha512-fJBmXt0G0MCufkRurx1NFhOGBVqq22JWqsORpLrhnJlmXkPOTHivmk5KiGsOWO5wHDX4cG9mkhKXekKKnTu1wg==}
+
+  '@alterno-dev/spatial-review@0.4.0':
+    resolution: {integrity: sha512-754lv8UK5M5gXT0V448PZ2/F4DhTV+29WWpGKy/eKGsxj4jxmsywhlSeDvMzs7OWnyp+NebDXBiwelbhq3MzVg==}
+    peerDependencies:
+      three: '>=0.160.0 <1'
 
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
@@ -37,6 +48,13 @@ packages:
     resolution: {integrity: sha512-o+qycAMZrh+TsE01GqWUxUIKR1AL0S8pq7zDkYOQw8GqfX8b8VoCKYUoHbhiX5j+7hr8XsuHDVU6+gkQJQKg9w==}
 
 snapshots:
+
+  '@alterno-dev/spatial-review-protocol@0.4.0': {}
+
+  '@alterno-dev/spatial-review@0.4.0(three@0.180.0)':
+    dependencies:
+      '@alterno-dev/spatial-review-protocol': 0.4.0
+      three: 0.180.0
 
   fsevents@2.3.2:
     optional: true

@@ -30,9 +30,19 @@ import { installAerial } from './aerial.js';
 import { buildAtmosphere } from './atmosphere.js';
 import { createPerf } from './perf.js';
 import { createPost } from './post.js';
+import {
+  registerSpatialReviewScene,
+  startSpatialReviewCapture,
+  startSpatialReviewDiscovery,
+} from './spatial-review.js';
 
 const EYE = 1.65;
 const DEG = Math.PI / 180;
+
+/* Discovery is available from the ordinary entry page. The capture bridge is
+   deliberately deferred until every registered root is built and the first
+   frame is ready at the bottom of this file. */
+startSpatialReviewDiscovery();
 
 /* ── the loading screen ────────────────────────────────────────────────────
  *
@@ -257,10 +267,13 @@ await loading.note('Raising the canyon walls…');
    curtains, a set of discrete distant buttes for the aerial perspective to layer,
    and the coarse talus at the junction between the two. */
 const rockMat = makeRockMaterial(tex);
+const canyon = buildWalls(path, terrain, rockMat);
+const buttes = buildDistantButtes(terrain, rockMat);
+const talus = buildTalus(path, terrain, rockMat);
 const rocks = [
-  ...buildWalls(path, terrain, rockMat),
-  ...buildDistantButtes(terrain, rockMat),
-  ...buildTalus(path, terrain, rockMat),
+  ...canyon,
+  ...buttes,
+  ...talus,
 ];
 for (const m of rocks) scene.add(m);
 
@@ -287,8 +300,22 @@ for (const m of clasts) scene.add(m);
 await loading.note('Growing the juniper…');
 
 setPlantAnisotropy(Math.min(8, renderer.capabilities.getMaxAnisotropy()));
-for (const m of buildJuniper(terrain, tex)) scene.add(m);
-for (const m of buildVegetation(path, terrain, rocks)) scene.add(m);
+const juniper = buildJuniper(terrain, tex);
+const vegetation = buildVegetation(path, terrain, rocks);
+for (const m of juniper) scene.add(m);
+for (const m of vegetation) scene.add(m);
+
+registerSpatialReviewScene({
+  textures: tex,
+  terrainMesh,
+  canyon,
+  buttes,
+  talus,
+  farRidges,
+  clasts,
+  juniper,
+  vegetation,
+});
 
 /* The clast material needs the viewport height to turn an instance's world radius
    into a projected pixel radius, which is what drives its level of detail. */
@@ -993,6 +1020,10 @@ loading.done();
 /* Unchanged, and deliberately: the harness waits on this global with a long
    timeout and nothing above may move when or how it appears. */
 window.__game = api;
+/* Only the explicit capture URL exposes the registered live catalog. By this
+   point construction, shader compilation, the deterministic initial view and
+   the existing readiness contract have all completed. */
+startSpatialReviewCapture();
 
 /* The harness drives the loop itself, via begin() after it has waited for
    __game to appear. A human opening the page has nothing to call it for them,

@@ -236,11 +236,13 @@ wall](media/04-shade-far.webp)
 
 ## A note on dependencies
 
-`package.json` lists one runtime dependency, but this is not a page that loads
-nothing over the network: Three.js 0.180 is fetched from a jsDelivr CDN at
-runtime through an importmap in `index.html`, so that the same tree serves both
-locally and from GitHub Pages. Three.js and nothing else. `pnpm install` is what
-the Playwright capture and measurement harness in `tools/` needs.
+Three.js 0.180 remains the scene's only rendering dependency. The optional
+review transport adds `@alterno-dev/spatial-review` 0.4.0 and its protocol
+package; neither participates in drawing the frame. All three browser modules
+are fetched from version-pinned jsDelivr URLs through the importmap in
+`index.html`, so the same tree serves locally and from GitHub Pages. `pnpm
+install` also installs the Playwright capture and measurement harness in
+`tools/`.
 
 The zero-asset claim is a separate one, and it is airtight. There is no
 `TextureLoader`, `GLTFLoader`, `RGBELoader`, `AudioLoader`, `FileLoader`,
@@ -248,11 +250,20 @@ The zero-asset claim is a separate one, and it is airtight. There is no
 The only binaries in the repository are the four screenshots on this page, and
 they are output, not input.
 
+## Spatial review
+
+The project includes a live [Alterno Spatial Review](SPATIAL_REVIEW.md)
+integration for its procedural scene and generated textures. Run `pnpm dev`,
+then open the [local review
+link](https://spatial-review.alterno.dev/review?site=http%3A%2F%2Flocalhost%3A8099%2F).
+The integration exports 20 source-mapped actors without adding UI to the scene.
+
 ## Stack
 
 Three.js 0.180 · plain ES modules with an importmap · no build step · about
-26,000 lines across 19 files in `src/` · Playwright for the capture and
-measurement harness in `tools/`. No asset pipeline, because there are no assets.
+26,000 lines across 20 files in `src/` · Spatial Review 0.4 · Playwright for the
+capture and measurement harness in `tools/`. No asset pipeline, because there
+are no assets.
 
 ## Credits
 
