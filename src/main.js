@@ -31,6 +31,7 @@ import { buildAtmosphere } from './atmosphere.js';
 import { createPerf } from './perf.js';
 import { createPost } from './post.js';
 import {
+  isSpatialReviewCapture,
   registerSpatialReviewScene,
   startSpatialReviewCapture,
   startSpatialReviewDiscovery,
@@ -38,6 +39,7 @@ import {
 
 const EYE = 1.65;
 const DEG = Math.PI / 180;
+const spatialReviewCapture = isSpatialReviewCapture();
 
 /* Discovery is available from the ordinary entry page. The capture bridge is
    deliberately deferred until every registered root is built and the first
@@ -1030,4 +1032,4 @@ startSpatialReviewCapture();
    so without this the scene boots paused: a black window that ignores every
    key. begin() guards on `running`, so the harness calling it later is a
    no-op and capture stays deterministic. */
-api.begin();
+if (!spatialReviewCapture) api.begin();

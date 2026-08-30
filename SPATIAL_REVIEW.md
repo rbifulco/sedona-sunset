@@ -1,8 +1,8 @@
 # Spatial Review integration
 
 Sedona Sunset exposes its authoritative procedural Three.js scene to Alterno
-Spatial Review through the live browser bridge. This is a first installation of
-`@alterno-dev/spatial-review` 0.4.0, with build ID
+Spatial Review through the live browser bridge. The integration uses
+`@alterno-dev/spatial-review` 0.5.0, with build ID
 `sedona-sunset@1.0.0`.
 
 ## Access decision
@@ -50,11 +50,11 @@ factory or distribution change.
 
 ### Ownership
 
-SDK 0.4.0 does not expose `scene-assemblies-v1` or `registerAssembly()`. Sedona
-Sunset also has no authored rooms, buildings, or loose contents that require a
-place owner. The export is therefore a legacy flat scene: each of the 20 actors
-can be selected independently, with no inherited scene ownership. Categories
-are browsing metadata and do not imply parenting.
+SDK 0.5.0 exposes `scene-assemblies-v1`, but Sedona Sunset has no authored rooms,
+buildings, or loose contents that require a place owner. The export therefore
+remains intentionally flat: each of the 20 actors can be selected independently,
+with no inherited scene ownership. Categories are browsing metadata and do not
+imply parenting.
 
 ### Paths
 
@@ -105,12 +105,21 @@ review. Do not migrate comments by similar names alone.
 ## Transport and lifecycle
 
 - Discovery: ordinary website entry URL.
+- Static locator: project-relative `.well-known/spatial-review.json`; this is
+  discoverable below the GitHub Pages project path rather than only at the
+  `github.io` origin root.
 - Live capture: `/?spatial-review-capture=1`, relative to the deployed site
   root.
-- Static discovery or JSON assets: not published; browser discovery and live
-  progressive geometry are the supported transport.
+- Static scene or asset JSON: not published; project-relative static discovery,
+  browser discovery, and live progressive geometry are the supported transport.
 - Capture readiness: all registered factories have completed, shaders have
   compiled, the deterministic first frame exists, and `window.__game` is ready.
+- Capture performance: after that deterministic frame, Spatial Review keeps the
+  resource bridge alive without starting the game loop. Geometry is serialized
+  only when requested, with a 64 MiB per-family ceiling. An asset-stream-capable
+  SDK additionally activates catalog status, cancellation, one active request,
+  a 64 MiB in-flight ceiling, and a 20-request queue per source frame; SDK 0.5.0
+  retains its progressive fallback.
 - Refresh: reload the connected website. The procedural scene rebuilds and the
   editor requests a fresh catalog.
 - Cleanup: both bridge detach functions run on `pagehide` and hot-module

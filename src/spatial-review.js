@@ -10,9 +10,17 @@ export const spatialReviewRegistry = new SceneAssetRegistry(SPATIAL_REVIEW_BUILD
 /* The user explicitly approved the official editor on 2026-08-30. No other
    production editor origin is authorized. Loopback-to-loopback access remains
    available through the SDK for local verification. */
-const bridgeOptions = Object.freeze({
+const authorizationOptions = Object.freeze({
   allowOfficialEditor: true,
   allowedOrigins: Object.freeze([]),
+});
+const streamingBridgeOptions = Object.freeze({
+  ...authorizationOptions,
+  maxGeometryBytes: 64 * 1024 * 1024,
+  maxConcurrentAssetRequests: 1,
+  maxInFlightBytes: 64 * 1024 * 1024,
+  maxQueuedAssetRequests: 20,
+  progressIntervalMs: 120,
 });
 
 let detachDiscovery = null;
@@ -28,8 +36,9 @@ export function startSpatialReviewDiscovery() {
   detachDiscovery = attachSpatialReviewDiscoveryBridge({
     name: 'Sedona Sunset',
     websiteUrl,
+    discoveryUrl: '.well-known/spatial-review.json',
     liveCapture: new URL('?spatial-review-capture=1', websiteUrl).href,
-  }, bridgeOptions);
+  }, authorizationOptions);
   return detachDiscovery;
 }
 
@@ -40,7 +49,15 @@ export function isSpatialReviewCapture() {
 
 export function startSpatialReviewCapture() {
   if (!isSpatialReviewCapture() || detachCapture) return detachCapture;
-  detachCapture = attachSceneAssetRegistryBridge(spatialReviewRegistry, bridgeOptions);
+  if (spatialReviewRegistry.getSourceStatus?.().phase === 'booting') {
+    spatialReviewRegistry.setSourceStatus({
+      phase: 'catalog-ready',
+      expectedActors: spatialReviewRegistry.size,
+      readyActors: spatialReviewRegistry.size,
+      message: 'Sedona roots are ready; geometry remains request-driven.',
+    });
+  }
+  detachCapture = attachSceneAssetRegistryBridge(spatialReviewRegistry, streamingBridgeOptions);
   return detachCapture;
 }
 
