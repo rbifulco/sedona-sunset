@@ -9,10 +9,10 @@ test('pins the ownership/progressive SDK release in npm and the browser import m
   const packageJson = JSON.parse(await read('package.json'));
   const html = await read('index.html');
   const lock = await read('pnpm-lock.yaml');
-  assert.equal(packageJson.dependencies['@alterno-dev/spatial-review'], '0.5.0');
-  assert.match(html, /@alterno-dev\/spatial-review@0\.5\.0/);
-  assert.match(html, /@alterno-dev\/spatial-review-protocol@0\.5\.0/);
-  assert.match(lock, /'@alterno-dev\/spatial-review@0\.5\.0'/);
+  assert.equal(packageJson.dependencies['@alterno-dev/spatial-review'], '0.6.0');
+  assert.match(html, /@alterno-dev\/spatial-review@0\.6\.0/);
+  assert.match(html, /@alterno-dev\/spatial-review-protocol@0\.6\.0/);
+  assert.match(lock, /'@alterno-dev\/spatial-review@0\.6\.0'/);
 });
 
 test('publishes project-relative discovery and a bounded capture bridge', async () => {

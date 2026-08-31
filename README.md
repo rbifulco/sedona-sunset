@@ -237,7 +237,7 @@ wall](media/04-shade-far.webp)
 ## A note on dependencies
 
 Three.js 0.180 remains the scene's only rendering dependency. The optional
-review transport adds `@alterno-dev/spatial-review` 0.5.0 and its protocol
+review transport adds `@alterno-dev/spatial-review` 0.6.0 and its protocol
 package; neither participates in drawing the frame. All three browser modules
 are fetched from version-pinned jsDelivr URLs through the importmap in
 `index.html`, so the same tree serves locally and from GitHub Pages. `pnpm
@@ -261,7 +261,7 @@ The integration exports 20 source-mapped actors without adding UI to the scene.
 ## Stack
 
 Three.js 0.180 · plain ES modules with an importmap · no build step · about
-26,000 lines across 20 files in `src/` · Spatial Review 0.5 · Playwright for the
+26,000 lines across 20 files in `src/` · Spatial Review 0.6 · Playwright for the
 capture and measurement harness in `tools/`. No asset pipeline, because there
 are no assets.
 

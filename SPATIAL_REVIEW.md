@@ -2,7 +2,7 @@
 
 Sedona Sunset exposes its authoritative procedural Three.js scene to Alterno
 Spatial Review through the live browser bridge. The integration uses
-`@alterno-dev/spatial-review` 0.5.0, with build ID
+`@alterno-dev/spatial-review` 0.6.0, with build ID
 `sedona-sunset@1.0.0`.
 
 ## Access decision
@@ -50,7 +50,7 @@ factory or distribution change.
 
 ### Ownership
 
-SDK 0.5.0 exposes `scene-assemblies-v1`, but Sedona Sunset has no authored rooms,
+SDK 0.6.0 exposes `scene-assemblies-v1`, but Sedona Sunset has no authored rooms,
 buildings, or loose contents that require a place owner. The export therefore
 remains intentionally flat: each of the 20 actors can be selected independently,
 with no inherited scene ownership. Categories are browsing metadata and do not
@@ -116,10 +116,10 @@ review. Do not migrate comments by similar names alone.
   compiled, the deterministic first frame exists, and `window.__game` is ready.
 - Capture performance: after that deterministic frame, Spatial Review keeps the
   resource bridge alive without starting the game loop. Geometry is serialized
-  only when requested, with a 64 MiB per-family ceiling. An asset-stream-capable
-  SDK additionally activates catalog status, cancellation, one active request,
-  a 64 MiB in-flight ceiling, and a 20-request queue per source frame; SDK 0.5.0
-  retains its progressive fallback.
+  only when requested, with a 64 MiB per-family ceiling. SDK 0.6.0 activates
+  catalog status, cancellation, one active request, a 64 MiB in-flight ceiling,
+  and a 20-request queue per source frame when streaming is negotiated; the
+  progressive path remains the fallback for older peers.
 - Refresh: reload the connected website. The procedural scene rebuilds and the
   editor requests a fresh catalog.
 - Cleanup: both bridge detach functions run on `pagehide` and hot-module
