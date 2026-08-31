@@ -32,6 +32,7 @@ import { createPerf } from './perf.js';
 import { createPost } from './post.js';
 import {
   isSpatialReviewCapture,
+  prepareSpatialReviewCapture,
   registerSpatialReviewScene,
   startSpatialReviewCapture,
   startSpatialReviewDiscovery,
@@ -1025,6 +1026,7 @@ window.__game = api;
 /* Only the explicit capture URL exposes the registered live catalog. By this
    point construction, shader compilation, the deterministic initial view and
    the existing readiness contract have all completed. */
+prepareSpatialReviewCapture();
 startSpatialReviewCapture();
 
 /* The harness drives the loop itself, via begin() after it has waited for

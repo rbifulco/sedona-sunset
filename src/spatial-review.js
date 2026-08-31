@@ -4,7 +4,7 @@ import {
   attachSpatialReviewDiscoveryBridge,
 } from '@alterno-dev/spatial-review';
 
-export const SPATIAL_REVIEW_BUILD_ID = 'sedona-sunset@1.0.0';
+export const SPATIAL_REVIEW_BUILD_ID = 'sedona-sunset@1.0.1';
 export const spatialReviewRegistry = new SceneAssetRegistry(SPATIAL_REVIEW_BUILD_ID);
 
 /* The user explicitly approved the official editor on 2026-08-30. No other
@@ -25,6 +25,23 @@ const streamingBridgeOptions = Object.freeze({
 
 let detachDiscovery = null;
 let detachCapture = null;
+const reviewMaterialAppearances = new Map();
+
+const reviewColors = Object.freeze({
+  terrain: 0xa86242,
+  sandstone: 0xa4492f,
+  farRidge: 0x8f4c3b,
+  clast: 0x84624f,
+  wood: 0x4b3328,
+  foliage: 0x4d5a32,
+  hummock: 0x6c4936,
+  litter: 0x705239,
+  grass: 0xa69b68,
+  scrub: 0x687552,
+  succulent: 0x6f8d73,
+  midJuniper: 0x3f4930,
+  farJuniper: 0x303727,
+});
 
 function websiteRoot() {
   return new URL('./', window.location.href).href;
@@ -140,11 +157,50 @@ function annotateRoots(roots, materialLabel, sourceRef, componentMaterialNames) 
   }
 }
 
+function stageReviewAppearance(roots, appearance) {
+  for (const root of roots) {
+    root.traverse((object) => {
+      const candidates = Array.isArray(object.material)
+        ? object.material
+        : object.material ? [object.material] : [];
+      for (const material of candidates) {
+        const value = typeof appearance === 'function'
+          ? appearance(object, material)
+          : appearance;
+        if (value && !reviewMaterialAppearances.has(material)) {
+          reviewMaterialAppearances.set(material, value);
+        }
+      }
+    });
+  }
+}
+
+function heroAppearance(object) {
+  if (object.name === 'juniper-wood') return { color: reviewColors.wood };
+  if (object.name === 'juniper-foliage') return { color: reviewColors.foliage };
+  if (object.name === 'juniper-hummock') return { color: reviewColors.hummock };
+  if (object.name === 'juniper-litter') return { color: reviewColors.litter };
+  return null;
+}
+
+function vegetationAppearance(object) {
+  if (object.name.startsWith('veg-grass')) return { color: reviewColors.grass };
+  if (object.name.startsWith('veg-shrub')) return { color: reviewColors.scrub };
+  if (object.name.startsWith('veg-pear') || object.name.startsWith('veg-agave')) {
+    return { color: reviewColors.succulent };
+  }
+  if (object.name.startsWith('veg-mid')) return { color: reviewColors.midJuniper };
+  if (object.name.startsWith('veg-far')) return { color: reviewColors.farJuniper };
+  return null;
+}
+
 function registerActor({
   actorId, assetId = actorId, name, category, sourceRef, roots, tags, order,
   materialLabel = `${name} surface`, componentMaterialNames = false,
+  reviewAppearance,
 }) {
   annotateRoots(roots, materialLabel, sourceRef, componentMaterialNames);
+  if (reviewAppearance) stageReviewAppearance(roots, reviewAppearance);
   spatialReviewRegistry.register({
     actorId, assetId, name, category, sourceRef, roots, tags, order,
   });
@@ -177,6 +233,7 @@ export function registerSpatialReviewScene({
     tags: ['wash', 'ground', 'procedural'],
     order: 10,
     materialLabel: 'Procedural wash terrain',
+    reviewAppearance: { color: reviewColors.terrain },
   });
 
   for (const root of canyon) {
@@ -191,6 +248,7 @@ export function registerSpatialReviewScene({
       tags: ['canyon', root.name.startsWith('wall') ? 'wall' : 'apron'],
       order: 20 + canyon.indexOf(root),
       materialLabel: 'Sedona sandstone',
+      reviewAppearance: { color: reviewColors.sandstone },
     });
   }
 
@@ -203,6 +261,7 @@ export function registerSpatialReviewScene({
     tags: ['butte', 'distance', 'silhouette'],
     order: 30 + index,
     materialLabel: 'Sedona sandstone',
+    reviewAppearance: { color: reviewColors.sandstone },
   }));
 
   registerActor({
@@ -214,6 +273,7 @@ export function registerSpatialReviewScene({
     tags: ['talus', 'instanced', 'procedural'],
     order: 50,
     materialLabel: 'Sedona sandstone talus',
+    reviewAppearance: { color: reviewColors.sandstone },
   });
 
   registerActor({
@@ -225,6 +285,7 @@ export function registerSpatialReviewScene({
     tags: ['distance', 'silhouette', 'context'],
     order: 60,
     materialLabel: 'Distant sandstone silhouette',
+    reviewAppearance: { color: reviewColors.farRidge },
   });
 
   registerActor({
@@ -236,6 +297,7 @@ export function registerSpatialReviewScene({
     tags: ['gravel', 'clasts', 'instanced', 'procedural'],
     order: 70,
     materialLabel: 'Procedural wash clasts',
+    reviewAppearance: { color: reviewColors.clast },
   });
 
   registerActor({
@@ -248,6 +310,7 @@ export function registerSpatialReviewScene({
     order: 80,
     materialLabel: 'Hero juniper material',
     componentMaterialNames: true,
+    reviewAppearance: heroAppearance,
   });
 
   registerActor({
@@ -260,9 +323,34 @@ export function registerSpatialReviewScene({
     order: 90,
     materialLabel: 'Sparse wash vegetation',
     componentMaterialNames: true,
+    reviewAppearance: vegetationAppearance,
   });
 
   return spatialReviewRegistry;
+}
+
+/**
+ * The editor serializes standard material fields, not this site's custom shader
+ * pipeline. Apply representative base colors only after the capture page has
+ * drawn its deterministic first frame. Capture pages do not start the game
+ * loop, so the website image stays unchanged while subsequent editor requests
+ * receive recognizable terrain, sandstone, vegetation, and wood materials.
+ */
+export function prepareSpatialReviewCapture() {
+  if (!isSpatialReviewCapture()) return false;
+  for (const [material, appearance] of reviewMaterialAppearances) {
+    if (appearance.color !== undefined && material.color?.isColor) {
+      material.color.setHex(appearance.color);
+    }
+    if (appearance.roughness !== undefined && 'roughness' in material) {
+      material.roughness = appearance.roughness;
+    }
+    if (appearance.metalness !== undefined && 'metalness' in material) {
+      material.metalness = appearance.metalness;
+    }
+    material.needsUpdate = true;
+  }
+  return true;
 }
 
 export function stopSpatialReview() {

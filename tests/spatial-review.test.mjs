@@ -26,10 +26,17 @@ test('publishes project-relative discovery and a bounded capture bridge', async 
   assert.match(integration, /maxInFlightBytes: 64 \* 1024 \* 1024/);
   assert.match(integration, /getSourceStatus\?\.\(\)\.phase === 'booting'/);
   assert.match(integration, /setSourceStatus\(\{/);
+  assert.match(integration, /SPATIAL_REVIEW_BUILD_ID = 'sedona-sunset@1\.0\.1'/);
 });
 
 test('keeps review capture static after the deterministic first frame', async () => {
   const main = await read('src/main.js');
+  const integration = await read('src/spatial-review.js');
   assert.match(main, /const spatialReviewCapture = isSpatialReviewCapture\(\)/);
+  assert.match(main, /renderOnce\(\);[\s\S]*prepareSpatialReviewCapture\(\);[\s\S]*startSpatialReviewCapture\(\)/);
   assert.match(main, /if \(!spatialReviewCapture\) api\.begin\(\)/);
+  assert.match(integration, /if \(!isSpatialReviewCapture\(\)\) return false/);
+  assert.match(integration, /terrain: 0xa86242/);
+  assert.match(integration, /sandstone: 0xa4492f/);
+  assert.match(integration, /foliage: 0x4d5a32/);
 });

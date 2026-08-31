@@ -3,7 +3,7 @@
 Sedona Sunset exposes its authoritative procedural Three.js scene to Alterno
 Spatial Review through the live browser bridge. The integration uses
 `@alterno-dev/spatial-review` 0.6.0, with build ID
-`sedona-sunset@1.0.0`.
+`sedona-sunset@1.0.1`.
 
 ## Access decision
 
@@ -72,8 +72,12 @@ post-processing, audio, collision corridor, player controller, and adaptive
 quality governor are intentionally excluded. The review renderer cannot
 reproduce the custom shader, lighting, atmosphere, audio, or post chain. Scene
 and asset review should be used for structure, placement, silhouettes,
-materials, generated texture evidence, and source mapping; appearance decisions
-must be compared in the real website.
+materials, generated texture evidence, and source mapping. The live capture
+applies representative capture-only base colors for the world-projected terrain,
+sandstone, scatter, and plant materials after the website's deterministic first
+frame. This keeps those surfaces recognizable when the editor cannot reproduce
+their shader pipeline, without changing the published experience. Appearance
+decisions must still be compared in the real website.
 
 ## Source and coordinate mapping
 
@@ -114,6 +118,9 @@ review. Do not migrate comments by similar names alone.
   browser discovery, and live progressive geometry are the supported transport.
 - Capture readiness: all registered factories have completed, shaders have
   compiled, the deterministic first frame exists, and `window.__game` is ready.
+- Capture appearance: after that first frame, capture-only material base colors
+  replace shader-white defaults before the bridge starts. The capture page stays
+  static, while editor serialization receives the review approximations.
 - Capture performance: after that deterministic frame, Spatial Review keeps the
   resource bridge alive without starting the game loop. Geometry is serialized
   only when requested, with a 64 MiB per-family ceiling. SDK 0.6.0 activates
