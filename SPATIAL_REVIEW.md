@@ -2,7 +2,7 @@
 
 Sedona Sunset exposes its authoritative procedural Three.js scene to Alterno
 Spatial Review through the live browser bridge. The integration uses
-`@alterno-dev/spatial-review` 0.6.0, with build ID
+`@alterno-dev/spatial-review` 0.7.0, with build ID
 `sedona-sunset@1.0.1`.
 
 ## Access decision
@@ -14,11 +14,14 @@ Both bridges therefore use:
 ```js
 {
   allowOfficialEditor: true,
+  allowLoopbackPeers: true,
   allowedOrigins: [],
 }
 ```
 
-The SDK additionally permits loopback-to-loopback access for local testing.
+The explicit `allowLoopbackPeers` opt-in preserves loopback-to-loopback access
+for local testing under SDK 0.7.0. Editor-origin policy advertisement remains
+disabled; no additional production origins are authorized.
 Installing the package alone exposes nothing. The entry page starts discovery;
 only `?spatial-review-capture=1` starts the live scene bridge after the scene and
 its first frame are ready.

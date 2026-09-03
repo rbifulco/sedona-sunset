@@ -12,6 +12,7 @@ export const spatialReviewRegistry = new SceneAssetRegistry(SPATIAL_REVIEW_BUILD
    available through the SDK for local verification. */
 const authorizationOptions = Object.freeze({
   allowOfficialEditor: true,
+  allowLoopbackPeers: true,
   allowedOrigins: Object.freeze([]),
 });
 const streamingBridgeOptions = Object.freeze({
