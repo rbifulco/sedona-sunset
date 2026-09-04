@@ -29772,10 +29772,32 @@ var SPOTS = [
   // back to the start
 ];
 
+// review/cooperative-yield.js
+function nextTask() {
+  if (globalThis.scheduler?.yield) return globalThis.scheduler.yield();
+  return new Promise((resolve) => {
+    const channel = new MessageChannel();
+    channel.port1.onmessage = () => {
+      channel.port1.close();
+      channel.port2.close();
+      resolve();
+    };
+    channel.port2.postMessage(null);
+  });
+}
+function createReviewYield({ now = () => performance.now(), task = nextTask, budgetMs = 8 } = {}) {
+  let lastYield = now();
+  return async function yieldReview() {
+    if (now() - lastYield < budgetMs) return;
+    await task();
+    lastYield = now();
+  };
+}
+
 // review/capture.js
-var yieldTask = () => new Promise((r) => setTimeout(r, 0));
+var yieldTask = createReviewYield();
 var identity = { position: [0, 0, 0], rotation: [0, 0, 0], scale: [1, 1, 1] };
-var registry = new SceneAssetRegistry("sedona-fresh-2c4e962275130371");
+var registry = new SceneAssetRegistry("sedona-fresh-4495a43e48dc8f31");
 var prepared = /* @__PURE__ */ new Map();
 var alphaMaps = /* @__PURE__ */ new Map();
 var ownedTextures = /* @__PURE__ */ new Set();
@@ -29934,7 +29956,7 @@ function register(id2, name, roots, sourceRef, category) {
   const transform2 = { position: position.toArray(), rotation: [rotation.x, rotation.y, rotation.z].map(MathUtils.radToDeg), scale: scale.toArray() };
   const center = bounds.getCenter(new Vector3()).toArray(), size = bounds.getSize(new Vector3()).toArray();
   sources.push({ id: id2, name, sourceRef, roots: roots.map((r) => r.name), triangles, bytes, bounds: { center, size } });
-  registry.registerDeferred({ actorId: id2, assetId: id2, name, sourceRef, category, parentAssemblyId: "sedona-world", transform: transform2, bounds: { center, size }, tags: ["authoritative-geometry", "approximate-shading"], stream: { capability: SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY, revision: "sedona-fresh-2c4e962275130371-" + id2, representations: [{ id: "detail", purpose: "detail", revision: "sedona-fresh-2c4e962275130371-" + id2 + "-detail", estimatedBytes: Math.ceil(bytes * 2 + 65536), triangles, attributes: ["position", "normal", "uv"], geometricError: 0 }, { id: "overview", purpose: "overview", revision: "sedona-fresh-2c4e962275130371-" + id2 + "-overview", estimatedBytes: Math.ceil(bytes * 2 + 65536), triangles, attributes: ["position", "normal", "uv"], geometricError: 0 }] }, async produceRepresentation({ signal, reportProgress }) {
+  registry.registerDeferred({ actorId: id2, assetId: id2, name, sourceRef, category, parentAssemblyId: "sedona-world", transform: transform2, bounds: { center, size }, tags: ["authoritative-geometry", "approximate-shading"], stream: { capability: SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY, revision: "sedona-fresh-4495a43e48dc8f31-" + id2, representations: [{ id: "detail", purpose: "detail", revision: "sedona-fresh-4495a43e48dc8f31-" + id2 + "-detail", estimatedBytes: Math.ceil(bytes * 2 + 65536), triangles, attributes: ["position", "normal", "uv"], geometricError: 0 }, { id: "overview", purpose: "overview", revision: "sedona-fresh-4495a43e48dc8f31-" + id2 + "-overview", estimatedBytes: Math.ceil(bytes * 2 + 65536), triangles, attributes: ["position", "normal", "uv"], geometricError: 0 }] }, async produceRepresentation({ signal, reportProgress }) {
     reportProgress({ phase: "generating", completed: 0, total: roots.length });
     const result = await prepare(roots, signal);
     reportProgress({ phase: "generating", completed: roots.length, total: roots.length });
