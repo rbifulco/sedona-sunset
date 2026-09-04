@@ -1,0 +1,23 @@
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Thu, 03 Sep 2026 18:52:46 GMT
+access-control-allow-origin: *
+etag: "6a99c1fe-39e"
+expires: Fri, 04 Sep 2026 06:16:29 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: DDBA:2D19B4:1110F7B:113AA89:6A9A5FE5
+x-github-edge-region: fra
+accept-ranges: bytes
+age: 0
+date: Fri, 04 Sep 2026 06:06:29 GMT
+via: 1.1 varnish
+x-served-by: cache-mxp6940-MXP
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1788501990.518789,VS0,VE151
+vary: Accept-Encoding
+x-fastly-request-id: 9a2d92803715615a4cc8e553ffef1f7b3eb6c7f1
+content-length: 926
+
