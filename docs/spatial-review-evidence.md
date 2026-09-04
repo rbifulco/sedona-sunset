@@ -18,9 +18,15 @@ Source geometry, normals, UVs, instance placements and supported maps survive. S
 
 Capture factory startup contains existing monolithic source generation steps (up to about 4.3s for stone scattering), isolated from ordinary page. Those factories cannot be made sub-50ms without refactoring original construction; no claim of fully chunked bootstrap is made. Deferred conversion and transport are separately bounded. Old complete-catalog peers are not supported for deferred actors. Experience supports exact discrete stops only, no segment/spline feedback.
 
-## Pending before final acceptance
+## Deployment and actual editor acceptance
 
-Publication and direct production discovery/capture/official editor verification. Protocol success is not substituted for editor UI success. Publication rollback source: feat/alterno-spatial-review at 3cd953428ac645edf000338e8d9b155b8d26b8a8.
+Published to the existing [GitHub Pages website](https://rbifulco.github.io/sedona-sunset/). Pages source is now `spatial-review/fresh-install`, root directory. Initial validated deployment commit `e92099d95f7f70a4cae27984d2ac8152e43473c6` built successfully on 2026-09-04 at 06:13:43 UTC, with no build error. Existing rollback branch `feat/alterno-spatial-review` remains untouched at `3cd953428ac645edf000338e8d9b155b8d26b8a8`; reverting the Pages source to that branch restores the prior deployment without rewriting history.
+
+Public discovery, capture HTML and capture JavaScript return HTTP 200 with correct JSON/HTML/JavaScript content types and no restrictive framing headers. The downloaded public bundle SHA256 matches the locked local rebuild: `46a6add04253532cd6235eed4bb2666aebc0abc800a2e7b3545900d5b7a40723`. Response headers are retained in evidence/production-*-headers.txt.
+
+The actual official editor at `https://spatial-review.alterno.dev` opened from the ordinary public website URL via static discovery, with no local-network permission needed. Hero juniper reached usable Asset readiness in 25.849 seconds: 54,878 triangles, 37,978 vertices, 5 nodes, 4 materials, geometry ready and 8/8 textures ready. Its settled screenshot visibly shows generated bark and foliage maps. The visible Experience workspace link was then followed; after its busy state cleared and the transition settled, the view showed 10 stops, 0 transitions, 58-degree FOV and live spatial context. Both views had no page errors. See evidence/hosted-asset-ready.json/.png and hosted-experience-ready.json/.png. The browser context was closed after the bounded check.
+
+The Asset framing remains distant even after Frame selection. Scene/Experience use the SDK scene profile without maps, so vegetation cards can appear opaque and terrain appears pale; these views are accepted for spatial structure and source stop inspection only. They are unsuitable for final appearance approval. No full visual-fidelity claim is made.
 
 The original full visual gate was not rerun: unchanged ordinary source, exact before/after image and interaction parity, and passing original preflight resolve this integration’s regression risk. No full-gate pass is claimed.
 

@@ -1,0 +1,1119 @@
+{
+  "url": "https://spatial-review.alterno.dev/asset-editor/?site=https%3A%2F%2Frbifulco.github.io%2Fsedona-sunset%2F&asset=hero-juniper",
+  "text": "Detailed scene assets\nAsset · live detailed meshes\nExperience\nScene\nAsset\n?\nGuide\nHints\nOff\n⌨\nKeys\n↓\nFeedback JSON\n0\nAll review\n＋\nAdd review\n⋯\nHero juniper\nHero juniper\nAdjust\nTree\nDetails\nAll review\nOrbit\nLeft drag · right drag + WASDQE to fly\nVIEW\nX\nY\nZ\n54,878 tris\n37,978 verts\n5 nodes\n4 materials\nno instances\nGeometry ready\n8/8 textures ready\n8.917 m · 6.904 m · 9.268 m",
+  "errors": [],
+  "messages": [
+    {
+      "type": "alterno:spatial-review:ready"
+    },
+    {
+      "type": "alterno:spatial-review:catalog"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-terrain",
+      "ok": false,
+      "error": "cancelled"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-wallR",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-terrain",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-apronR",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-wallL",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronL"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-apronL",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte0"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte0"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte0"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte0",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte1"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte1"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte1"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte1",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte2"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte2"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte2"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte2",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte3"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte3"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte3"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte3",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte4"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte4"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte4"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte4",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte5"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte5"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte5"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte5",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte6"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte6"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte6"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte6",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte7"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte7"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte7"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte7",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte8"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte8"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte8"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte8",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte9"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte9"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte9"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte9",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-talus"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-talus"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-talus"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-talus",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "far-ridges"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "far-ridges"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "far-ridges"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "far-ridges",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-stones",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "hero-juniper",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-vegetation"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-vegetation"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-vegetation"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-vegetation",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:catalog"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-terrain"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-terrain",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-wallR",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronR"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-apronR",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-wallL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-wallL",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronL"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-apronL"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-apronL",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte0"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte0"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte0"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte0",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte1"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte1"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte1"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte1",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte2"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte2"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte2"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte2",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte3"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte3"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte3"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte3",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte4"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte4"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte4"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte4",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte5"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte5"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte5"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte5",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte6"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte6"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte6"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte6",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte7"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte7"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte7"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte7",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte8"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte8"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte8"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte8",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte9"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte9"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "formation-butte9"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "formation-butte9",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-talus"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-talus"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "canyon-talus"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "canyon-talus",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "far-ridges"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "far-ridges"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "far-ridges"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "far-ridges",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-stones"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-stones",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-vegetation"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-vegetation"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "wash-vegetation"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "wash-vegetation",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:asset-progress",
+      "assetId": "hero-juniper"
+    },
+    {
+      "type": "alterno:spatial-review:asset-response",
+      "assetId": "hero-juniper",
+      "ok": true
+    },
+    {
+      "type": "alterno:spatial-review:source-status"
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:d89f0253-8e07-4441-a26f-388bb3aa588c",
+      "contentType": "image/png",
+      "bytes": 318421
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:c91ab693-573f-4ba2-bde2-a8732a04511b",
+      "contentType": "image/png",
+      "bytes": 52575
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:7517c42d-1878-4fa4-843a-31b4f6f3c722",
+      "contentType": "image/png",
+      "bytes": 119506
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:600db8e7-1d02-4004-ac0d-f74967e44856",
+      "contentType": "image/png",
+      "bytes": 15372
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:b66cbd36-83b6-4358-88a6-034d9b14fb2c",
+      "contentType": "image/png",
+      "bytes": 571405
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:45fe3597-e0fa-4562-bae3-0aef0baba1fb",
+      "contentType": "image/png",
+      "bytes": 2451579
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:8f70faf0-326c-4d5b-83aa-64a2b5305129",
+      "contentType": "image/png",
+      "bytes": 461452
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:2b3e0473-a377-4af3-9aa1-845af38f5bd1",
+      "contentType": "image/png",
+      "bytes": 2222609
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:2b3e0473-a377-4af3-9aa1-845af38f5bd1",
+      "contentType": "image/png",
+      "bytes": 2222609
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:57e8c371-6f65-4f76-90e0-81e8ed182c09",
+      "contentType": "image/png",
+      "bytes": 2107664
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:57e8c371-6f65-4f76-90e0-81e8ed182c09",
+      "contentType": "image/png",
+      "bytes": 2107664
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:57e8c371-6f65-4f76-90e0-81e8ed182c09",
+      "contentType": "image/png",
+      "bytes": 2107664
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:0e0fa58a-4f62-41e1-9a64-84c007f6c4b6",
+      "contentType": "image/png",
+      "bytes": 310391
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:5db520fb-b1ab-47d4-922b-b128dadb2a2d",
+      "contentType": "image/png",
+      "bytes": 426154
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:7e9e5634-edb1-44f5-baa1-6d7fdefdca93",
+      "contentType": "image/png",
+      "bytes": 169866
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:4315de12-05fc-4465-8a0e-72b464be5c34",
+      "contentType": "image/png",
+      "bytes": 26707
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:14f69996-293c-4e8d-bfa2-ec0fa61002ad",
+      "contentType": "image/png",
+      "bytes": 60955
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:4c472ca7-c7d2-49bf-93ec-9b6f78f58d84",
+      "contentType": "image/png",
+      "bytes": 743958
+    },
+    {
+      "type": "alterno:spatial-review:resource-response",
+      "ok": true,
+      "resourceId": "three-texture:da7e1f79-5097-4275-bafe-d489a547393c",
+      "contentType": "image/png",
+      "bytes": 91888
+    }
+  ]
+}

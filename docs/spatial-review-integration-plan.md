@@ -42,8 +42,8 @@ All initial actors, immutable representation descriptors, owner and navigation s
 
 Local ordinary URL: http://localhost:4313/ . Capture: http://localhost:4313/review/capture.html . Editor: http://localhost:4413/ . Static discovery must be requested from ordinary URL; direct capture-only tests do not prove discovery. Ordinary-page performance screen is not triggered by source inspection: no ordinary-page code changed and no review code runs there. A matching baseline/post representative visual and interaction check is retained nevertheless.
 
-## Evidence and remaining gates
+## Evidence and acceptance
 
 Baseline: existing preflight passed. Muted Chromium Metal on Apple M3 Max, 640x360, #medium: 19.156s complete baseline probe, no page errors. `tmp/fresh-evidence/before.png` and before.json retain mid-wash view at d46 and juniper interaction d62/yaw34/pitch3. This is actual Metal evidence, not Windows D3D11 or software-rasterizer equivalence.
 
-Remaining results are recorded in docs/spatial-review-evidence.md. Required completion: static discovery from ordinary URL, representative Scene/Asset/Experience access, live generated foliage texture, stable feedback/source mapping, refreshed unresolved feedback, local post comparison, deployed discovery/capture/editor and explicit limits. Full original visual gate is separate from preflight; never label a preflight-only run a full gate pass.
+Completed results and explicit limitations are recorded in docs/spatial-review-evidence.md. Acceptance covered: static discovery from ordinary URL, representative Scene/Asset/Experience access, live generated foliage texture, stable feedback/source mapping, refreshed unresolved feedback, local post comparison, deployed discovery/capture/editor and explicit limits. Full original visual gate is separate from preflight; never label a preflight-only run a full gate pass.
