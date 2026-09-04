@@ -1,0 +1,317 @@
+{
+  "cancelled": {
+    "name": "AbortError",
+    "message": "signal is aborted without reason",
+    "ms": 17.90000009536743
+  },
+  "actor": {
+    "actorId": "hero-juniper",
+    "assetId": "hero-juniper",
+    "name": "Hero juniper",
+    "sourceRef": "src/juniper.js#buildJuniper",
+    "category": "Vegetation",
+    "parentAssemblyId": "sedona-world",
+    "visible": true,
+    "transform": {
+      "position": [
+        6.74,
+        1.6080784732356492,
+        -65.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "bounds": {
+      "center": [
+        6.902847051620483,
+        4.1179272201783865,
+        -65.8501178264618
+      ],
+      "size": [
+        8.916540622711182,
+        6.904288941051048,
+        9.26823377609253
+      ]
+    },
+    "localTransform": {
+      "position": [
+        6.74,
+        1.6080784732356492,
+        -65.65
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "sourceMappings": [
+    {
+      "actorId": "wash-terrain",
+      "sourceRef": "src/terrain.js#buildTerrainMesh"
+    },
+    {
+      "actorId": "canyon-wallR",
+      "sourceRef": "src/rock.js#buildWalls"
+    },
+    {
+      "actorId": "canyon-apronR",
+      "sourceRef": "src/rock.js#buildWalls"
+    },
+    {
+      "actorId": "canyon-wallL",
+      "sourceRef": "src/rock.js#buildWalls"
+    },
+    {
+      "actorId": "canyon-apronL",
+      "sourceRef": "src/rock.js#buildWalls"
+    },
+    {
+      "actorId": "formation-butte0",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte1",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte2",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte3",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte4",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte5",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte6",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte7",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte8",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "formation-butte9",
+      "sourceRef": "src/rock.js#BUTTES"
+    },
+    {
+      "actorId": "canyon-talus",
+      "sourceRef": "src/rock.js#buildTalus"
+    },
+    {
+      "actorId": "far-ridges",
+      "sourceRef": "src/farridge.js#buildFarRidges"
+    },
+    {
+      "actorId": "wash-stones",
+      "sourceRef": "src/scatter.js#buildScatter"
+    },
+    {
+      "actorId": "hero-juniper",
+      "sourceRef": "src/juniper.js#buildJuniper"
+    },
+    {
+      "actorId": "wash-vegetation",
+      "sourceRef": "src/vegetation.js#buildVegetation"
+    }
+  ],
+  "navigation": [
+    {
+      "id": "wash-keyboard-viewpoints",
+      "name": "Keyboard viewpoints (instant jumps)",
+      "sourceRef": "src/main.js#SPOTS",
+      "stops": [
+        {
+          "id": "Digit1",
+          "name": "Wash entrance",
+          "camera": [
+            1.674050562316012,
+            0.08515207520431511,
+            0.11149245310493851
+          ],
+          "target": [
+            1.674050562316012,
+            0.015395601460189812,
+            -0.8860715971548857
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit2",
+          "name": "Mid wash",
+          "camera": [
+            1.9147361999386538,
+            0.32712544270174915,
+            -37.69746977344801
+          ],
+          "target": [
+            1.9147361999386538,
+            0.32712544270174915,
+            -38.69746977344801
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit3",
+          "name": "Hero juniper",
+          "camera": [
+            -0.9644478729229639,
+            0.45784714379738034,
+            -53.424738577026396
+          ],
+          "target": [
+            -0.4060213238919127,
+            0.5101831000403242,
+            -54.2526399824011
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit4",
+          "name": "The bend",
+          "camera": [
+            -7.536792206816185,
+            1.1835651525753044,
+            -82.6859730079392
+          ],
+          "target": [
+            -7.911170600016919,
+            1.2184646492778053,
+            -83.61259204715346
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit5",
+          "name": "Sun gap",
+          "camera": [
+            -7.717917681651661,
+            1.4496343873063153,
+            -110.5156477914069
+          ],
+          "target": [
+            -7.717917681651661,
+            1.5541628505739689,
+            -111.51016968677519
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit6",
+          "name": "Second bend",
+          "camera": [
+            4.569824279644967,
+            2.362069743099804,
+            -158.9308425954114
+          ],
+          "target": [
+            4.569824279644967,
+            2.396969239802305,
+            -159.9302334224305
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit7",
+          "name": "Long straight",
+          "camera": [
+            3.2956449799740786,
+            2.8740793752813447,
+            -208.51980140474333
+          ],
+          "target": [
+            3.2956449799740786,
+            2.908978871983846,
+            -209.51919223176242
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit8",
+          "name": "Upper wash",
+          "camera": [
+            -3.8949964358825726,
+            3.6158304407554427,
+            -257.79226457240344
+          ],
+          "target": [
+            -3.8949964358825726,
+            3.650729937457944,
+            -258.79165539942255
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit9",
+          "name": "Far end",
+          "camera": [
+            -0.5975255682691452,
+            6.239336208049165,
+            -307.6739291876054
+          ],
+          "target": [
+            -0.5975255682691452,
+            6.309092681793291,
+            -308.6714932378652
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        },
+        {
+          "id": "Digit0",
+          "name": "Start",
+          "camera": [
+            0.49695685505867004,
+            0.009644737042458829,
+            8.031342506408691
+          ],
+          "target": [
+            0.49695685505867004,
+            0.009644737042458829,
+            7.031342506408691
+          ],
+          "fov": 58,
+          "sourceRef": "src/main.js#SPOTS"
+        }
+      ],
+      "segments": []
+    }
+  ],
+  "replaced": true,
+  "restored": true,
+  "teardown": true
+}

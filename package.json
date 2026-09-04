@@ -7,12 +7,15 @@
   "scripts": {
     "dev": "node tools/serve.mjs",
     "shoot": "node tools/shoot.mjs",
-    "gate": "node tools/gate.mjs"
+    "gate": "node tools/gate.mjs",
+    "build": "node tools/build-review.mjs"
   },
   "devDependencies": {
+    "esbuild": "0.25.9",
     "playwright": "^1.62.0"
   },
   "dependencies": {
+    "@alterno-dev/spatial-review": "0.7.0",
     "three": "^0.180.0"
   }
 }

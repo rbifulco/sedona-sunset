@@ -1,0 +1,7 @@
+{
+  "schema": "spatial-review-discovery/v1",
+  "name": "Sedona Sunset",
+  "liveCapture": "../review/capture.html",
+  "version": 1,
+  "websiteUrl": "../"
+}

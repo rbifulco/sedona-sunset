@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: false
+minimumReleaseAgeExclude:
+  - '@alterno-dev/spatial-review-protocol@0.7.0'
+  - '@alterno-dev/spatial-review@0.7.0'

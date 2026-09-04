@@ -1,0 +1,10 @@
+import {build} from 'esbuild';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const source=fs.readFileSync('src/main.js','utf8');
+const spots=source.match(/const SPOTS = (\[[\s\S]*?\n\]);/)[1];
+fs.writeFileSync('review/source-spots.js',`// Generated from src/main.js#SPOTS. Do not edit.\nexport const SPOTS = ${spots};\n`);
+const hash=crypto.createHash('sha256');
+for(const file of [...fs.readdirSync('src').map(x=>'src/'+x),...fs.readdirSync('review').filter(x=>x.endsWith('.js')&&!x.startsWith('capture.bundle')).map(x=>'review/'+x),'pnpm-lock.yaml'])hash.update(fs.readFileSync(file));
+await build({entryPoints:['review/capture.js'],bundle:true,format:'esm',outfile:'review/capture.bundle.js',define:{__REVIEW_BUILD__:JSON.stringify('sedona-fresh-'+hash.digest('hex').slice(0,16))}});
+console.log('Built isolated Spatial Review capture bundle from locked published SDK.');

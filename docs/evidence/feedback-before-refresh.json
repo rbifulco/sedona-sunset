@@ -1,0 +1,31 @@
+{
+  "schema": "spatial-feedback/v1",
+  "kind": "agent-change-set",
+  "scene": {
+    "id": "live-scene-4qbqqo",
+    "name": "Sedona Sunset"
+  },
+  "units": "m",
+  "ownership": {
+    "capability": "scene-assemblies-v1",
+    "mode": "hierarchical"
+  },
+  "application": "absolute-intent",
+  "changes": [
+    {
+      "target": {
+        "kind": "placement",
+        "actorId": "hero-juniper",
+        "assetId": "hero-juniper",
+        "sourceRef": "src/juniper.js#buildJuniper"
+      },
+      "object": {
+        "id": "hero-juniper",
+        "name": "Hero juniper",
+        "assetId": "hero-juniper",
+        "sourceRef": "src/juniper.js#buildJuniper"
+      },
+      "overall": "Installation validation: preserve the authored hero juniper placement and inspect foliage cutouts. Disposable check."
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "readyMs": 19155,
+  "boot": {
+    "t0": 330.90000009536743,
+    "painted": 11.099999904632568,
+    "phases": [
+      {
+        "note": "Sedona Sunset — drawing the desert. Under a minute.",
+        "ms": 43
+      },
+      {
+        "note": "Drawing the wash floor…",
+        "ms": 624
+      },
+      {
+        "note": "Drawing sand…",
+        "ms": 237
+      },
+      {
+        "note": "Drawing sandstone…",
+        "ms": 2018
+      },
+      {
+        "note": "Drawing grit…",
+        "ms": 55
+      },
+      {
+        "note": "Drawing gravel…",
+        "ms": 102
+      },
+      {
+        "note": "Weathering it…",
+        "ms": 246
+      },
+      {
+        "note": "Cutting the wash…",
+        "ms": 3375
+      },
+      {
+        "note": "Raising the canyon walls…",
+        "ms": 4483
+      },
+      {
+        "note": "Setting the far country…",
+        "ms": 47
+      },
+      {
+        "note": "Scattering the stones…",
+        "ms": 4620
+      },
+      {
+        "note": "Growing the juniper…",
+        "ms": 788
+      },
+      {
+        "note": "Lighting the sky…",
+        "ms": 726
+      },
+      {
+        "note": "Compiling shaders…",
+        "ms": 1342
+      }
+    ],
+    "stalls": 4620,
+    "total": 18728
+  },
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+  "camera": [
+    1.9147361999386538,
+    0.32712544270174915,
+    -37.69746977344801
+  ],
+  "scene": [
+    {
+      "name": "terrain",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "wallR",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "apronR",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "wallL",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "apronL",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte3",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte4",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte5",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte6",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte7",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte8",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "butte9",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "talus0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "talus1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "talus2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "talus3",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "farridge",
+      "type": "Group",
+      "children": 4
+    },
+    {
+      "name": "granule0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "granule1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "granule2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "gravel0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "gravel1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "gravel2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "gravel3",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "gravel4",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "cobble0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "cobble1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "cobble2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "cobble3",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "pavement0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "pavement1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "pavement2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "block0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "block1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "block2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "block3",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "slab0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "slab1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "slab2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "slab3",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "boulder0",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "boulder1",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "boulder2",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "collar",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "scour",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "juniper-wood",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "juniper-foliage",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "juniper-hummock",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "juniper-litter",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-grass",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-shrub-a",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-shrub-b",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-shrub-c",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-pear",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-agave",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-mid-a",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-mid-b",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-mid-c",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-mid-d",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "veg-far",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "sky",
+      "type": "Mesh",
+      "children": 0
+    },
+    {
+      "name": "sun",
+      "type": "DirectionalLight",
+      "children": 0
+    },
+    {
+      "name": "",
+      "type": "Object3D",
+      "children": 0
+    },
+    {
+      "name": "sunNear",
+      "type": "DirectionalLight",
+      "children": 0
+    },
+    {
+      "name": "",
+      "type": "Object3D",
+      "children": 0
+    },
+    {
+      "name": "",
+      "type": "Light",
+      "children": 0
+    },
+    {
+      "name": "dust",
+      "type": "Points",
+      "children": 0
+    },
+    {
+      "name": "saltation",
+      "type": "Points",
+      "children": 0
+    },
+    {
+      "name": "saltation_far",
+      "type": "Points",
+      "children": 0
+    }
+  ],
+  "resources": [
+    "http://localhost:4313/src/main.js",
+    "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "http://localhost:4313/src/path.js",
+    "http://localhost:4313/src/corridor.js",
+    "http://localhost:4313/src/terrain.js",
+    "http://localhost:4313/src/farridge.js",
+    "http://localhost:4313/src/scatter.js",
+    "http://localhost:4313/src/sky.js",
+    "http://localhost:4313/src/rock.js",
+    "http://localhost:4313/src/vegetation.js",
+    "http://localhost:4313/src/juniper.js",
+    "http://localhost:4313/src/aerial.js",
+    "http://localhost:4313/src/plantex.js",
+    "http://localhost:4313/src/textures.js",
+    "http://localhost:4313/src/audio.js",
+    "http://localhost:4313/src/atmosphere.js",
+    "http://localhost:4313/src/perf.js",
+    "http://localhost:4313/src/post.js",
+    "http://localhost:4313/src/noise.js",
+    "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/geometries/ConvexGeometry.js",
+    "http://localhost:4313/src/atmos.js",
+    "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/utils/BufferGeometryUtils.js",
+    "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/math/ConvexHull.js",
+    "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.core.js"
+  ],
+  "interaction": {
+    "ms": 1.4000000953674316,
+    "camera": [
+      -0.9644478729229639,
+      0.45784714379738034,
+      -53.424738577026396
+    ],
+    "probe": {
+      "median": 44,
+      "p90": 165,
+      "p99": 245,
+      "max": 254,
+      "skyAvg": 186,
+      "groundAvg": 51
+    }
+  },
+  "errors": []
+}

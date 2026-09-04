@@ -1,0 +1,2682 @@
+{
+  "discovery": {
+    "schema": "spatial-review-discovery/v1",
+    "name": "Sedona Sunset",
+    "liveCapture": "../review/capture.html",
+    "version": 1,
+    "websiteUrl": "../"
+  },
+  "scene": {
+    "schema": "scene-actors/v1",
+    "actors": [
+      {
+        "actorId": "wash-terrain",
+        "assetId": "wash-terrain",
+        "name": "Wash terrain",
+        "sourceRef": "src/terrain.js#buildTerrainMesh",
+        "category": "Terrain",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            0,
+            62.75114190578461,
+            -833.9340667724609
+          ],
+          "size": [
+            3505.449462890625,
+            129.40761303901672,
+            2141.937530517578
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "canyon-wallR",
+        "assetId": "canyon-wallR",
+        "name": "wallR",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            34.65712022781372,
+            20.592220783233643,
+            -149.65656900405884
+          ],
+          "size": [
+            84.58097743988037,
+            71.33444118499756,
+            329.3826017379761
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "canyon-apronR",
+        "assetId": "canyon-apronR",
+        "name": "apronR",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            19.545732736587524,
+            7.719183266162872,
+            -149.62001419067383
+          ],
+          "size": [
+            42.11420011520386,
+            18.48518693447113,
+            328.48360443115234
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "canyon-wallL",
+        "assetId": "canyon-wallL",
+        "name": "wallL",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -41.362016677856445,
+            26.02331018447876,
+            -150.7064151763916
+          ],
+          "size": [
+            92.73250961303711,
+            82.1966199874878,
+            328.82123947143555
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "canyon-apronL",
+        "assetId": "canyon-apronL",
+        "name": "apronL",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -22.561667919158936,
+            6.686863720417023,
+            -150.57115411758423
+          ],
+          "size": [
+            42.76560306549072,
+            15.42231023311615,
+            327.95901012420654
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte0",
+        "assetId": "formation-butte0",
+        "name": "butte0",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -167.0100612640381,
+            96.97811794281006,
+            -1099.9617309570312
+          ],
+          "size": [
+            232.59309768676758,
+            148.25921821594238,
+            212.2525634765625
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte1",
+        "assetId": "formation-butte1",
+        "name": "butte1",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            145.31865692138672,
+            105.1012134552002,
+            -618.4160614013672
+          ],
+          "size": [
+            240.54066467285156,
+            166.26980209350586,
+            253.39358520507812
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte2",
+        "assetId": "formation-butte2",
+        "name": "butte2",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -221.25282669067383,
+            85.4043836593628,
+            -787.4556884765625
+          ],
+          "size": [
+            304.31099700927734,
+            142.9429111480713,
+            325.0675048828125
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte3",
+        "assetId": "formation-butte3",
+        "name": "butte3",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            271.4147644042969,
+            101.82978057861328,
+            -904.5649108886719
+          ],
+          "size": [
+            312.519775390625,
+            185.46141052246094,
+            319.44830322265625
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte4",
+        "assetId": "formation-butte4",
+        "name": "butte4",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            44.76454162597656,
+            66.59197425842285,
+            -855.8995971679688
+          ],
+          "size": [
+            366.4629211425781,
+            72.02030563354492,
+            313.7073974609375
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte5",
+        "assetId": "formation-butte5",
+        "name": "butte5",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            199.15789103507996,
+            73.52712917327881,
+            -1007.0505981445312
+          ],
+          "size": [
+            407.0941300392151,
+            85.00230598449707,
+            398.9473876953125
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte6",
+        "assetId": "formation-butte6",
+        "name": "butte6",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -520.9649200439453,
+            59.31906270980835,
+            -651.1144409179688
+          ],
+          "size": [
+            371.9090270996094,
+            86.8066987991333,
+            360.968017578125
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte7",
+        "assetId": "formation-butte7",
+        "name": "butte7",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            565.8881378173828,
+            110.96341133117676,
+            -746.7168273925781
+          ],
+          "size": [
+            379.2068786621094,
+            99.31661605834961,
+            378.19891357421875
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte8",
+        "assetId": "formation-butte8",
+        "name": "butte8",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            872.5649719238281,
+            74.38983631134033,
+            -982.7235412597656
+          ],
+          "size": [
+            469.65594482421875,
+            93.72476768493652,
+            463.21087646484375
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "formation-butte9",
+        "assetId": "formation-butte9",
+        "name": "butte9",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -906.219970703125,
+            84.57064819335938,
+            -1099.4144592285156
+          ],
+          "size": [
+            445.619140625,
+            89.32461547851562,
+            468.29852294921875
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "canyon-talus",
+        "assetId": "canyon-talus",
+        "name": "Canyon talus",
+        "sourceRef": "src/rock.js#buildTalus",
+        "category": "Canyon",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -2.9021780291432435,
+            5.454916802935847,
+            -146.18129418984535
+          ],
+          "size": [
+            73.72504564132095,
+            14.767602042626887,
+            321.7951400052883
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "far-ridges",
+        "assetId": "far-ridges",
+        "name": "Far ridgelines",
+        "sourceRef": "src/farridge.js#buildFarRidges",
+        "category": "Landforms",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -2.082275390625,
+            605.0614471435547,
+            -3120.6539916992188
+          ],
+          "size": [
+            14586.59814453125,
+            1689.6539611816406,
+            8573.185180664062
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "wash-stones",
+        "assetId": "wash-stones",
+        "name": "Wash stone distribution",
+        "sourceRef": "src/scatter.js#buildScatter",
+        "category": "Stones",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -0.8301117062182506,
+            2.9606289304319713,
+            -115.9644667171533
+          ],
+          "size": [
+            69.56959830002643,
+            10.07061096548712,
+            272.6709581790367
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "hero-juniper",
+        "assetId": "hero-juniper",
+        "name": "Hero juniper",
+        "sourceRef": "src/juniper.js#buildJuniper",
+        "category": "Vegetation",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            6.74,
+            1.6080784732356492,
+            -65.65
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            6.902847051620483,
+            4.1179272201783865,
+            -65.8501178264618
+          ],
+          "size": [
+            8.916540622711182,
+            6.904288941051048,
+            9.26823377609253
+          ]
+        },
+        "localTransform": {
+          "position": [
+            6.74,
+            1.6080784732356492,
+            -65.65
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "actorId": "wash-vegetation",
+        "assetId": "wash-vegetation",
+        "name": "Wash vegetation distribution",
+        "sourceRef": "src/vegetation.js#buildVegetation",
+        "category": "Vegetation",
+        "parentAssemblyId": "sedona-world",
+        "visible": true,
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            24.65697343421232,
+            94.62355688520505,
+            -342.44408017960825
+          ],
+          "size": [
+            1452.8481575671146,
+            190.17017630657202,
+            728.3521704228674
+          ]
+        },
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "assemblies": [
+      {
+        "assemblyId": "sedona-world",
+        "name": "Sedona wash and surroundings",
+        "sourceRef": "src/main.js#scene",
+        "localTransform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "transform": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bounds": {
+          "center": [
+            -2.082275390625,
+            605.0614471435547,
+            -3120.6539916992188
+          ],
+          "size": [
+            14586.59814453125,
+            1689.6539611816406,
+            8573.185180664062
+          ]
+        },
+        "visible": true
+      }
+    ],
+    "ownership": {
+      "capability": "scene-assemblies-v1",
+      "mode": "hierarchical"
+    },
+    "navigationSequences": [
+      {
+        "id": "wash-keyboard-viewpoints",
+        "name": "Keyboard viewpoints (instant jumps)",
+        "sourceRef": "src/main.js#SPOTS",
+        "stops": [
+          {
+            "id": "Digit1",
+            "name": "Wash entrance",
+            "camera": [
+              1.674050562316012,
+              0.08515207520431511,
+              0.11149245310493851
+            ],
+            "target": [
+              1.674050562316012,
+              0.015395601460189812,
+              -0.8860715971548857
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit2",
+            "name": "Mid wash",
+            "camera": [
+              1.9147361999386538,
+              0.32712544270174915,
+              -37.69746977344801
+            ],
+            "target": [
+              1.9147361999386538,
+              0.32712544270174915,
+              -38.69746977344801
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit3",
+            "name": "Hero juniper",
+            "camera": [
+              -0.9644478729229639,
+              0.45784714379738034,
+              -53.424738577026396
+            ],
+            "target": [
+              -0.4060213238919127,
+              0.5101831000403242,
+              -54.2526399824011
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit4",
+            "name": "The bend",
+            "camera": [
+              -7.536792206816185,
+              1.1835651525753044,
+              -82.6859730079392
+            ],
+            "target": [
+              -7.911170600016919,
+              1.2184646492778053,
+              -83.61259204715346
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit5",
+            "name": "Sun gap",
+            "camera": [
+              -7.717917681651661,
+              1.4496343873063153,
+              -110.5156477914069
+            ],
+            "target": [
+              -7.717917681651661,
+              1.5541628505739689,
+              -111.51016968677519
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit6",
+            "name": "Second bend",
+            "camera": [
+              4.569824279644967,
+              2.362069743099804,
+              -158.9308425954114
+            ],
+            "target": [
+              4.569824279644967,
+              2.396969239802305,
+              -159.9302334224305
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit7",
+            "name": "Long straight",
+            "camera": [
+              3.2956449799740786,
+              2.8740793752813447,
+              -208.51980140474333
+            ],
+            "target": [
+              3.2956449799740786,
+              2.908978871983846,
+              -209.51919223176242
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit8",
+            "name": "Upper wash",
+            "camera": [
+              -3.8949964358825726,
+              3.6158304407554427,
+              -257.79226457240344
+            ],
+            "target": [
+              -3.8949964358825726,
+              3.650729937457944,
+              -258.79165539942255
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit9",
+            "name": "Far end",
+            "camera": [
+              -0.5975255682691452,
+              6.239336208049165,
+              -307.6739291876054
+            ],
+            "target": [
+              -0.5975255682691452,
+              6.309092681793291,
+              -308.6714932378652
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          },
+          {
+            "id": "Digit0",
+            "name": "Start",
+            "camera": [
+              0.49695685505867004,
+              0.009644737042458829,
+              8.031342506408691
+            ],
+            "target": [
+              0.49695685505867004,
+              0.009644737042458829,
+              7.031342506408691
+            ],
+            "fov": 58,
+            "sourceRef": "src/main.js#SPOTS"
+          }
+        ],
+        "segments": []
+      }
+    ]
+  },
+  "catalog": {
+    "schema": "asset-review-3d/v1",
+    "id": "alterno-live-scene-assets",
+    "name": "Detailed scene assets",
+    "units": "m",
+    "source": {
+      "label": "Registered live scene assets",
+      "generator": "@alterno-dev/spatial-review",
+      "importedAt": "2026-09-04T05:50:22.765Z"
+    },
+    "assets": [
+      {
+        "id": "wash-terrain",
+        "name": "Wash terrain",
+        "sourceRef": "src/terrain.js#buildTerrainMesh",
+        "category": "Terrain",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-wash-terrain",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-wash-terrain-detail",
+              "estimatedBytes": 65892016,
+              "triangles": 966160,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-wash-terrain-overview",
+              "estimatedBytes": 65892016,
+              "triangles": 966160,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "canyon-wallR",
+        "name": "wallR",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-canyon-wallR",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-wallR-detail",
+              "estimatedBytes": 20893600,
+              "triangles": 113196,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-wallR-overview",
+              "estimatedBytes": 20893600,
+              "triangles": 113196,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "canyon-apronR",
+        "name": "apronR",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-canyon-apronR",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-apronR-detail",
+              "estimatedBytes": 1347648,
+              "triangles": 6968,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-apronR-overview",
+              "estimatedBytes": 1347648,
+              "triangles": 6968,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "canyon-wallL",
+        "name": "wallL",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-canyon-wallL",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-wallL-detail",
+              "estimatedBytes": 21597216,
+              "triangles": 117020,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-wallL-overview",
+              "estimatedBytes": 21597216,
+              "triangles": 117020,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "canyon-apronL",
+        "name": "apronL",
+        "sourceRef": "src/rock.js#buildWalls",
+        "category": "Canyon",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-canyon-apronL",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-apronL-detail",
+              "estimatedBytes": 1347648,
+              "triangles": 6968,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-apronL-overview",
+              "estimatedBytes": 1347648,
+              "triangles": 6968,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte0",
+        "name": "butte0",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte0",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte0-detail",
+              "estimatedBytes": 1393280,
+              "triangles": 7216,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte0-overview",
+              "estimatedBytes": 1393280,
+              "triangles": 7216,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte1",
+        "name": "butte1",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte1",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte1-detail",
+              "estimatedBytes": 1393280,
+              "triangles": 7216,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte1-overview",
+              "estimatedBytes": 1393280,
+              "triangles": 7216,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte2",
+        "name": "butte2",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte2",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte2-detail",
+              "estimatedBytes": 1069440,
+              "triangles": 5456,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte2-overview",
+              "estimatedBytes": 1069440,
+              "triangles": 5456,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte3",
+        "name": "butte3",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte3",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte3-detail",
+              "estimatedBytes": 1587584,
+              "triangles": 8272,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte3-overview",
+              "estimatedBytes": 1587584,
+              "triangles": 8272,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte4",
+        "name": "butte4",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte4",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte4-detail",
+              "estimatedBytes": 1619968,
+              "triangles": 8448,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte4-overview",
+              "estimatedBytes": 1619968,
+              "triangles": 8448,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte5",
+        "name": "butte5",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte5",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte5-detail",
+              "estimatedBytes": 1619968,
+              "triangles": 8448,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte5-overview",
+              "estimatedBytes": 1619968,
+              "triangles": 8448,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte6",
+        "name": "butte6",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte6",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte6-detail",
+              "estimatedBytes": 842752,
+              "triangles": 4224,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte6-overview",
+              "estimatedBytes": 842752,
+              "triangles": 4224,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte7",
+        "name": "butte7",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte7",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte7-detail",
+              "estimatedBytes": 1069440,
+              "triangles": 5456,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte7-overview",
+              "estimatedBytes": 1069440,
+              "triangles": 5456,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte8",
+        "name": "butte8",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte8",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte8-detail",
+              "estimatedBytes": 842752,
+              "triangles": 4224,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte8-overview",
+              "estimatedBytes": 842752,
+              "triangles": 4224,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "formation-butte9",
+        "name": "butte9",
+        "sourceRef": "src/rock.js#BUTTES",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-formation-butte9",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte9-detail",
+              "estimatedBytes": 842752,
+              "triangles": 4224,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-formation-butte9-overview",
+              "estimatedBytes": 842752,
+              "triangles": 4224,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "canyon-talus",
+        "name": "Canyon talus",
+        "sourceRef": "src/rock.js#buildTalus",
+        "category": "Canyon",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-canyon-talus",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-talus-detail",
+              "estimatedBytes": 908704,
+              "triangles": 236500,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-canyon-talus-overview",
+              "estimatedBytes": 908704,
+              "triangles": 236500,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "far-ridges",
+        "name": "Far ridgelines",
+        "sourceRef": "src/farridge.js#buildFarRidges",
+        "category": "Landforms",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-far-ridges",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-far-ridges-detail",
+              "estimatedBytes": 4487488,
+              "triangles": 69048,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-far-ridges-overview",
+              "estimatedBytes": 4487488,
+              "triangles": 69048,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "wash-stones",
+        "name": "Wash stone distribution",
+        "sourceRef": "src/scatter.js#buildScatter",
+        "category": "Stones",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-wash-stones",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-wash-stones-detail",
+              "estimatedBytes": 12549280,
+              "triangles": 2255598,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-wash-stones-overview",
+              "estimatedBytes": 12549280,
+              "triangles": 2255598,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "hero-juniper",
+        "name": "Hero juniper",
+        "sourceRef": "src/juniper.js#buildJuniper",
+        "category": "Vegetation",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-hero-juniper",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-hero-juniper-detail",
+              "estimatedBytes": 4574968,
+              "triangles": 54878,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-hero-juniper-overview",
+              "estimatedBytes": 4574968,
+              "triangles": 54878,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      },
+      {
+        "id": "wash-vegetation",
+        "name": "Wash vegetation distribution",
+        "sourceRef": "src/vegetation.js#buildVegetation",
+        "category": "Vegetation",
+        "tags": [
+          "authoritative-geometry",
+          "approximate-shading"
+        ],
+        "nodes": [],
+        "materials": [],
+        "stream": {
+          "capability": "asset-stream-v1",
+          "revision": "sedona-fresh-2c4e962275130371-wash-vegetation",
+          "representations": [
+            {
+              "id": "detail",
+              "purpose": "detail",
+              "revision": "sedona-fresh-2c4e962275130371-wash-vegetation-detail",
+              "estimatedBytes": 602200,
+              "triangles": 86994,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            },
+            {
+              "id": "overview",
+              "purpose": "overview",
+              "revision": "sedona-fresh-2c4e962275130371-wash-vegetation-overview",
+              "estimatedBytes": 602200,
+              "triangles": 86994,
+              "attributes": [
+                "position",
+                "normal",
+                "uv"
+              ],
+              "geometricError": 0
+            }
+          ]
+        },
+        "feedback": {
+          "status": "unreviewed",
+          "summary": "",
+          "annotations": [],
+          "modifications": []
+        }
+      }
+    ]
+  },
+  "terminal": true,
+  "asset": {
+    "id": "hero-juniper",
+    "sourceRef": "src/juniper.js#buildJuniper",
+    "nodes": [
+      {
+        "id": "hero-juniper-root",
+        "name": "Hero juniper",
+        "sourceRef": "src/juniper.js#buildJuniper",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "hero-juniper-juniper-wood-1",
+        "name": "juniper-wood",
+        "sourceRef": "src/juniper.js#buildJuniper#hero-juniper-juniper-wood-1",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "hero-juniper-juniper-foliage-2",
+        "name": "juniper-foliage",
+        "sourceRef": "src/juniper.js#buildJuniper#hero-juniper-juniper-foliage-2",
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "hero-juniper-juniper-hummock-3",
+        "name": "juniper-hummock",
+        "sourceRef": "src/juniper.js#buildJuniper#hero-juniper-juniper-hummock-3",
+        "position": [
+          -6.74,
+          -1.6080784732356492,
+          65.65
+        ]
+      },
+      {
+        "id": "hero-juniper-juniper-litter-4",
+        "name": "juniper-litter",
+        "sourceRef": "src/juniper.js#buildJuniper#hero-juniper-juniper-litter-4",
+        "position": [
+          -6.74,
+          -1.6080784732356492,
+          65.65
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "id": "hero-juniper-material-juniper-wood-review-shading-approximation-1",
+        "name": "juniper-wood — review shading approximation",
+        "type": "standard",
+        "color": "#ffffff",
+        "emissive": "#000000",
+        "roughness": 1,
+        "metalness": 0,
+        "opacity": 1,
+        "doubleSided": false,
+        "wireframe": false,
+        "maps": [
+          {
+            "slot": "map",
+            "resourceId": "three-texture:1c7770e5-e7b2-42bd-95b3-60688f84ba83",
+            "wrap": "repeat",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          },
+          {
+            "slot": "normalMap",
+            "resourceId": "three-texture:4c0adb10-3764-4c99-bd2c-54a638a42ae8",
+            "wrap": "repeat",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          }
+        ]
+      },
+      {
+        "id": "hero-juniper-material-juniper-foliage-review-shading-approximation-2",
+        "name": "juniper-foliage — review shading approximation",
+        "type": "standard",
+        "color": "#ffffff",
+        "emissive": "#000000",
+        "roughness": 0.97,
+        "metalness": 0,
+        "opacity": 1,
+        "doubleSided": true,
+        "wireframe": false,
+        "maps": [
+          {
+            "slot": "map",
+            "resourceId": "three-texture:afcdc88c-423e-436d-a7e0-fea8a8be9d5d",
+            "wrap": "clamp",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          },
+          {
+            "slot": "alphaMap",
+            "name": "Source alpha threshold 0.42",
+            "resourceId": "three-texture:24b643e1-79db-40a3-b15f-1fa7f01389c8",
+            "wrap": "clamp",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          }
+        ]
+      },
+      {
+        "id": "hero-juniper-material-juniper-hummock-review-shading-approximation-3",
+        "name": "juniper-hummock — review shading approximation",
+        "type": "standard",
+        "color": "#d4c9c0",
+        "emissive": "#000000",
+        "roughness": 1,
+        "metalness": 0,
+        "opacity": 1,
+        "doubleSided": false,
+        "wireframe": false,
+        "maps": [
+          {
+            "slot": "map",
+            "resourceId": "three-texture:e8606aa6-f8cc-4318-886a-a35ed483dcd1",
+            "wrap": "repeat",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          },
+          {
+            "slot": "normalMap",
+            "resourceId": "three-texture:dc824c32-a673-49ae-a80b-ceca041f2ed8",
+            "wrap": "repeat",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          }
+        ]
+      },
+      {
+        "id": "hero-juniper-material-juniper-litter-review-shading-approximation-4",
+        "name": "juniper-litter — review shading approximation",
+        "type": "standard",
+        "color": "#f6f1ea",
+        "emissive": "#000000",
+        "roughness": 0.94,
+        "metalness": 0,
+        "opacity": 1,
+        "doubleSided": true,
+        "wireframe": false,
+        "maps": [
+          {
+            "slot": "map",
+            "resourceId": "three-texture:8ae62d21-87a3-4a0b-9962-342ee4199cde",
+            "wrap": "clamp",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          },
+          {
+            "slot": "alphaMap",
+            "name": "Source alpha threshold 0.4",
+            "resourceId": "three-texture:121202ff-5eac-4242-9ab7-4dbd77f7bfcb",
+            "wrap": "clamp",
+            "repeat": [
+              1,
+              1
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "flipY": false
+          }
+        ]
+      }
+    ]
+  },
+  "textures": [
+    {
+      "material": "juniper-wood — review shading approximation",
+      "slot": "map",
+      "ok": true,
+      "bytes": 461452,
+      "contentType": "image/png",
+      "decoded": [
+        512,
+        512
+      ]
+    },
+    {
+      "material": "juniper-wood — review shading approximation",
+      "slot": "normalMap",
+      "ok": true,
+      "bytes": 571405,
+      "contentType": "image/png",
+      "decoded": [
+        512,
+        512
+      ]
+    },
+    {
+      "material": "juniper-foliage — review shading approximation",
+      "slot": "map",
+      "ok": true,
+      "bytes": 318421,
+      "contentType": "image/png",
+      "decoded": [
+        512,
+        512
+      ]
+    },
+    {
+      "material": "juniper-foliage — review shading approximation",
+      "slot": "alphaMap",
+      "ok": true,
+      "bytes": 52575,
+      "contentType": "image/png",
+      "decoded": [
+        512,
+        512
+      ]
+    },
+    {
+      "material": "juniper-hummock — review shading approximation",
+      "slot": "map",
+      "ok": true,
+      "bytes": 2222609,
+      "contentType": "image/png",
+      "decoded": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "material": "juniper-hummock — review shading approximation",
+      "slot": "normalMap",
+      "ok": true,
+      "bytes": 2451579,
+      "contentType": "image/png",
+      "decoded": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "material": "juniper-litter — review shading approximation",
+      "slot": "map",
+      "ok": true,
+      "bytes": 119506,
+      "contentType": "image/png",
+      "decoded": [
+        512,
+        256
+      ]
+    },
+    {
+      "material": "juniper-litter — review shading approximation",
+      "slot": "alphaMap",
+      "ok": true,
+      "bytes": 15372,
+      "contentType": "image/png",
+      "decoded": [
+        512,
+        256
+      ]
+    }
+  ]
+}
