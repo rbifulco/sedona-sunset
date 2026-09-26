@@ -10,6 +10,7 @@ import {buildVegetation} from '../src/vegetation.js';
 import {makeDirt,makeSand,makeRock,makeGrit,makeClastSurface,makeMacro,makeVariance,makeCracks} from '../src/textures.js';
 import {SPOTS} from './source-spots.js';
 import {createReviewYield} from './cooperative-yield.js';
+import {measureStreamRepresentations} from './stream-estimates.js';
 const yieldTask=createReviewYield();
 const identity={position:[0,0,0],rotation:[0,0,0],scale:[1,1,1]};
 const registry=new SceneAssetRegistry(__REVIEW_BUILD__);
@@ -71,12 +72,13 @@ async function prepare(roots,signal){
  }catch(error){for(const item of allocated){item.geometry.dispose();ownedGeometries.delete(item.geometry);if(item.material){item.material.dispose();ownedMaterials.delete(item.material);}}throw error;}
 }
 function register(id,name,roots,sourceRef,category){
- const bounds=new THREE.Box3();let triangles=0,bytes=0;
- for(const root of roots){root.updateMatrixWorld(true);bounds.expandByObject(root,true);root.traverse(o=>{if(o.geometry){const g=o.geometry;triangles+=(g.index?g.index.count:g.attributes.position.count)/3*(o.count||1);bytes+=Object.values(g.attributes).reduce((n,a)=>n+a.array.byteLength,0)+(g.index?.array.byteLength||0)+(o.instanceMatrix?.array.byteLength||0);}});}
+ const bounds=new THREE.Box3();
+ for(const root of roots){root.updateMatrixWorld(true);bounds.expandByObject(root,true);}
+ const {triangles,instances,sceneBytes,detailBytes}=measureStreamRepresentations(roots);
  const position=new THREE.Vector3(),quaternion=new THREE.Quaternion(),scale=new THREE.Vector3();roots[0].matrixWorld.decompose(position,quaternion,scale);const rotation=new THREE.Euler().setFromQuaternion(quaternion,'XYZ');const transform={position:position.toArray(),rotation:[rotation.x,rotation.y,rotation.z].map(THREE.MathUtils.radToDeg),scale:scale.toArray()};
  const center=bounds.getCenter(new THREE.Vector3()).toArray(),size=bounds.getSize(new THREE.Vector3()).toArray();
- sources.push({id,name,sourceRef,roots:roots.map(r=>r.name),triangles,bytes,bounds:{center,size}});
- registry.registerDeferred({actorId:id,assetId:id,name,sourceRef,category,parentAssemblyId:'sedona-world',transform,bounds:{center,size},tags:['authoritative-geometry','approximate-shading'],stream:{capability:SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY,revision:__REVIEW_BUILD__+'-'+id,representations:[{id:'detail',purpose:'detail',revision:__REVIEW_BUILD__+'-'+id+'-detail',estimatedBytes:Math.ceil(bytes*2+65536),triangles,attributes:['position','normal','uv'],geometricError:0},{id:'overview',purpose:'overview',revision:__REVIEW_BUILD__+'-'+id+'-overview',estimatedBytes:Math.ceil(bytes*2+65536),triangles,attributes:['position','normal','uv'],geometricError:0}]},async produceRepresentation({signal,reportProgress}){reportProgress({phase:'generating',completed:0,total:roots.length});const result=await prepare(roots,signal);reportProgress({phase:'generating',completed:roots.length,total:roots.length});return result;}});
+ sources.push({id,name,sourceRef,roots:roots.map(r=>r.name),triangles,instances,sceneBytes,detailBytes,bounds:{center,size}});
+ registry.registerDeferred({actorId:id,assetId:id,name,sourceRef,category,parentAssemblyId:'sedona-world',transform,bounds:{center,size},tags:['authoritative-geometry','approximate-shading'],stream:{capability:SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY,revision:__REVIEW_BUILD__+'-'+id,representations:[{id:'detail',purpose:'detail',revision:__REVIEW_BUILD__+'-'+id+'-detail',estimatedBytes:detailBytes,triangles,instances,attributes:['position','normal','uv'],geometricError:0},{id:'overview',purpose:'overview',revision:__REVIEW_BUILD__+'-'+id+'-overview',estimatedBytes:sceneBytes,triangles,instances,attributes:['position'],geometricError:0}]},async produceRepresentation({signal,reportProgress}){reportProgress({phase:'generating',completed:0,total:roots.length});const result=await prepare(roots,signal);reportProgress({phase:'generating',completed:roots.length,total:roots.length});return result;}});
 }
 register('wash-terrain','Wash terrain',[ground],'src/terrain.js#buildTerrainMesh','Terrain');
 for(const m of walls)register('canyon-'+m.name,m.name,[m],'src/rock.js#buildWalls','Canyon');

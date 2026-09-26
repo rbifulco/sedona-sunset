@@ -1,5 +1,9 @@
 # Fresh integration evidence
 
+The deployment and hash below describe the September 4 publication. The
+September 26 local review in [spatial-review-review-2026-09-26.md](spatial-review-review-2026-09-26.md)
+changes the capture bundle; those changes have not been published.
+
 ## Completed
 
 - Original clean baseline: c26daa8f8faef3b46653f6cdec983a6956714ba4; no original SDK or build task.
@@ -36,4 +40,4 @@ The first Asset snapshot was taken during preview preparation at22s despite all 
 
 Final local Asset readiness check passed in26.271s: Hero juniper,54,878 triangles,37,978 vertices,5nodes,4materials, geometry ready and8/8textures ready. It visibly contains textured wood and alpha-cut foliage; default framing is distant, and appearance limitations remain. The visible Experience link opens the correct /path-editor workspace with10 keyboard stops,0transitions and58-degree FOV. The initial screenshot was during crossfade; production smoke waits for the transition. Local editor checkout is clean at d9576b2e0cd3ee5e215e762b2ded39ad83f3c60c.
 
-Published bundle SHA256:46a6add04253532cd6235eed4bb2666aebc0abc800a2e7b3545900d5b7a40723. Build ID:sedona-fresh-2c4e962275130371. The source and locked-dependency rebuild produces identical bundle bytes.
+Published bundle SHA256:46a6add04253532cd6235eed4bb2666aebc0abc800a2e7b3545900d5b7a40723. Build ID:sedona-fresh-2c4e962275130371. At publication time, the source and locked-dependency rebuild produced identical bundle bytes.
