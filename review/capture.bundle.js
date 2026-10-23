@@ -16341,7 +16341,7 @@ var reversedFuncs = {
   [GreaterEqualDepth]: LessEqualDepth
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.7.0/node_modules/@alterno-dev/spatial-review-protocol/dist/constants.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/constants.js
 var SPATIAL_REVIEW_INDEX_SCHEMA = "spatial-review-index/v1";
 var LEGACY_SPATIAL_REVIEW_INDEX_SCHEMA = "sole-review-index/v1";
 var ASSET_REVIEW_SCHEMA = "asset-review-3d/v1";
@@ -16372,7 +16372,17 @@ var LEGACY_SPATIAL_REVIEW_READY = "sole:scene-asset-registry:ready";
 var LEGACY_SPATIAL_REVIEW_REQUEST = "sole:scene-asset-registry:request";
 var LEGACY_SPATIAL_REVIEW_CATALOG = "sole:scene-asset-registry:catalog";
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.7.0/node_modules/@alterno-dev/spatial-review-protocol/dist/normalize.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/prepared-package.js
+var PREPARED_REVIEW_LIMITS = {
+  manifestBytes: 4 * 1024 * 1024,
+  catalogBytes: 24 * 1024 * 1024,
+  resourceBytes: 64 * 1024 * 1024,
+  totalBytes: 256 * 1024 * 1024,
+  resources: 16384
+};
+var littleEndian = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
+
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/normalize.js
 function record(value, label) {
   if (!value || typeof value !== "object" || Array.isArray(value))
     throw new Error(`${label} must be a JSON object.`);
@@ -16422,11 +16432,11 @@ function normalizeSpatialReviewEditorOriginPolicy(value) {
   return { mode: policy.mode, ...policy.allowLoopbackPeers === void 0 ? {} : { allowLoopbackPeers: policy.allowLoopbackPeers } };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.7.0/node_modules/@alterno-dev/spatial-review-protocol/dist/editor.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/editor.js
 var OFFICIAL_SPATIAL_REVIEW_EDITOR_ORIGIN = "https://spatial-review.alterno.dev";
 var OFFICIAL_SPATIAL_REVIEW_EDITOR_URL = `${OFFICIAL_SPATIAL_REVIEW_EDITOR_ORIGIN}/review`;
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.7.0/node_modules/@alterno-dev/spatial-review-protocol/dist/scene-ownership.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/scene-ownership.js
 var MAX_SCENE_ASSEMBLIES = 1e4;
 var MAX_OWNED_SCENE_ACTORS = 1e5;
 var MAX_SCENE_OWNERSHIP_DEPTH = 128;
@@ -16567,13 +16577,13 @@ function validateSceneOwnership(value) {
   return errors;
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/slug.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/slug.js
 function slugify(value, fallback = "item") {
   const slug = value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   return slug || fallback;
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/serializer.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/serializer.js
 function hex(color, fallback = "#8d8d88") {
   return color ? `#${color.getHexString()}` : fallback;
 }
@@ -16709,7 +16719,7 @@ function assetFromObject3DRoots(roots, label, sourceRef, options = {}) {
   return { id: assetId, name: label.replace(/\.[^.]+$/, ""), sourceRef, category: options.category ?? "Registered scene asset", tags: options.tags ?? ["registered", "scene-asset"], nodes, geometries, materials, sourceTransform: { position: sourceTransform.position.toArray(), rotation: sourceTransform.rotation, scale: sourceTransform.scale }, animations: options.animations, feedback: { status: "unreviewed", summary: "", annotations: [], modifications: [] } };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource.js
 function sourceReference(texture) {
   const image = texture.source?.data;
   return typeof texture.userData.sourceRef === "string" ? texture.userData.sourceRef : typeof texture.userData.requestUrl === "string" ? texture.userData.requestUrl : image?.currentSrc || image?.src;
@@ -16803,7 +16813,7 @@ async function readTextureResource(texture, maxBytes) {
   return { bytes: await blob.arrayBuffer(), contentType: blob.type || "image/png" };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/scene-cache.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/scene-cache.js
 var equal = (a, b) => a.length === b.length && a.every((value, index) => value === b[index]);
 var attributeKey = (attribute) => attribute ? `${attribute.count}:${attribute.itemSize}:${attribute.normalized}:${"data" in attribute ? attribute.data.version : attribute.version}` : "";
 var SceneGraphCache = class {
@@ -16923,7 +16933,7 @@ var SceneGraphCache = class {
   }
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/assemblies.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/assemblies.js
 function transformMatrix(transform2) {
   return new Matrix4().compose(new Vector3(...transform2.position), new Quaternion().setFromEuler(new Euler(...transform2.rotation.map(MathUtils.degToRad), "XYZ")), new Vector3(...transform2.scale));
 }
@@ -17019,7 +17029,7 @@ function assembleScene(registrations, actors, hierarchical) {
   };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/geometry-transfer.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/geometry-transfer.js
 function enumerableDataEntries(value) {
   return Object.keys(value).map((key) => {
     const descriptor = Object.getOwnPropertyDescriptor(value, key);
@@ -17273,7 +17283,7 @@ function prepareAssetTransfer(source, maxBytes = 64 * 1024 * 1024, options = {})
   return { asset, transfer: assetTransferBuffers(asset), bytes };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/registry.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/registry.js
 var MAX_DEFERRED_REPRESENTATION_CACHE_ENTRIES = 32;
 var MAX_DEFERRED_REPRESENTATION_CACHE_BYTES = 64 * 1024 * 1024;
 var MAX_DEFERRED_TEXTURE_RESOURCE_OWNERS = 64;
@@ -18037,7 +18047,7 @@ var SceneAssetRegistry = class {
   }
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/origin-authorization.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/origin-authorization.js
 var AUTHORIZATION = Symbol("SpatialReviewEditorAuthorization");
 function canonicalConfiguredOrigin(value, label) {
   try {
@@ -18142,7 +18152,7 @@ function spatialReviewEditorOriginAllowed(authorization, producerOrigin, editorO
   return editor === producer || authorization.allowedOrigins.includes(editor) || authorization.allowOfficialEditor && editor === OFFICIAL_SPATIAL_REVIEW_EDITOR_ORIGIN || Boolean(authorization.allowOrigin?.(editor)) || authorization.allowLoopbackPeers && loopback(producer) && loopback(editor);
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/bridge.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/bridge.js
 var DEFAULT_MAX_RESOURCE_BYTES = 16 * 1024 * 1024;
 var DEFAULT_MAX_GEOMETRY_BYTES = 64 * 1024 * 1024;
 function positiveLimit(value, fallback, maximum = Number.MAX_SAFE_INTEGER) {
@@ -18574,7 +18584,7 @@ function attachSceneAssetRegistryBridge(registry2, options = {}) {
   };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource-cache.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource-cache.js
 var ResourceCache = class {
   entries = /* @__PURE__ */ new Map();
   acquire(source, variant, create) {
@@ -18620,7 +18630,7 @@ var ResourceCache = class {
   }
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.7.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/runtime.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/runtime.js
 var ThreeAssetResourceCache = class {
   geometries = new ResourceCache();
   materials = new ResourceCache();
@@ -29830,7 +29840,7 @@ function measureStreamRepresentations(roots) {
 // review/capture.js
 var yieldTask = createReviewYield();
 var identity = { position: [0, 0, 0], rotation: [0, 0, 0], scale: [1, 1, 1] };
-var registry = new SceneAssetRegistry("sedona-fresh-46ca067409a803c5");
+var registry = new SceneAssetRegistry("sedona-fresh-492cae84f76de94f");
 var prepared = /* @__PURE__ */ new Map();
 var alphaMaps = /* @__PURE__ */ new Map();
 var ownedTextures = /* @__PURE__ */ new Set();
@@ -29982,7 +29992,7 @@ function register(id2, name, roots, sourceRef, category) {
   const transform2 = { position: position.toArray(), rotation: [rotation.x, rotation.y, rotation.z].map(MathUtils.radToDeg), scale: scale.toArray() };
   const center = bounds.getCenter(new Vector3()).toArray(), size = bounds.getSize(new Vector3()).toArray();
   sources.push({ id: id2, name, sourceRef, roots: roots.map((r) => r.name), triangles, instances, sceneBytes, detailBytes, bounds: { center, size } });
-  registry.registerDeferred({ actorId: id2, assetId: id2, name, sourceRef, category, parentAssemblyId: "sedona-world", transform: transform2, bounds: { center, size }, tags: ["authoritative-geometry", "approximate-shading"], stream: { capability: SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY, revision: "sedona-fresh-46ca067409a803c5-" + id2, representations: [{ id: "detail", purpose: "detail", revision: "sedona-fresh-46ca067409a803c5-" + id2 + "-detail", estimatedBytes: detailBytes, triangles, instances, attributes: ["position", "normal", "uv"], geometricError: 0 }, { id: "overview", purpose: "overview", revision: "sedona-fresh-46ca067409a803c5-" + id2 + "-overview", estimatedBytes: sceneBytes, triangles, instances, attributes: ["position"], geometricError: 0 }] }, async produceRepresentation({ signal, reportProgress }) {
+  registry.registerDeferred({ actorId: id2, assetId: id2, name, sourceRef, category, parentAssemblyId: "sedona-world", transform: transform2, bounds: { center, size }, tags: ["authoritative-geometry", "approximate-shading"], stream: { capability: SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY, revision: "sedona-fresh-492cae84f76de94f-" + id2, representations: [{ id: "detail", purpose: "detail", revision: "sedona-fresh-492cae84f76de94f-" + id2 + "-detail", estimatedBytes: detailBytes, triangles, instances, attributes: ["position", "normal", "uv"], geometricError: 0 }, { id: "overview", purpose: "overview", revision: "sedona-fresh-492cae84f76de94f-" + id2 + "-overview", estimatedBytes: sceneBytes, triangles, instances, attributes: ["position"], geometricError: 0 }] }, async produceRepresentation({ signal, reportProgress }) {
     reportProgress({ phase: "generating", completed: 0, total: roots.length });
     const result = await prepare(roots, signal);
     reportProgress({ phase: "generating", completed: roots.length, total: roots.length });
