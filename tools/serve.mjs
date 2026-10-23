@@ -19,7 +19,7 @@ http.createServer((rq, rs) => {
   fs.readFile(f, (e, d) => {
     if (e) { rs.writeHead(404, { 'content-type': 'text/plain' }); return rs.end('not found'); }
     rs.writeHead(200, { 'content-type': TYPES[path.extname(f)] || 'application/octet-stream',
-                        'cache-control': 'no-cache' });
+                        'cache-control': 'no-cache', ...(rel.includes('/.well-known/') ? {'access-control-allow-origin':'*'} : {}) });
     rs.end(d);
   });
 }).listen(PORT, () => console.log(`nightdrive → http://localhost:${PORT}/`));

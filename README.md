@@ -12,7 +12,7 @@ finished. Nothing in it is composited and nothing is retouched — every pixel o
 it, the rock, the gravel, the sky and the haze, was computed in the GPU a few
 seconds before the shutter.*
 
-**Walk it: https://starknightt.github.io/sedona-sunset/** — desktop, keyboard and
+**Walk it: https://rbifulco.github.io/sedona-sunset/** — desktop, keyboard and
 mouse.
 
 **Read the brief it was built from: [PROMPT.md](PROMPT.md).** One page, and the
@@ -269,3 +269,9 @@ taken and what was declined, in [`PERF.md`](PERF.md).
 ## Licence
 
 MIT — see [`LICENSE`](LICENSE).
+
+## Spatial Review
+
+[Open the approved Spatial Review editor](https://spatial-review.alterno.dev/review?site=https%3A%2F%2Frbifulco.github.io%2Fsedona-sunset%2F). The ordinary website stays unchanged; a separate capture page reconstructs actual procedural geometry on request. Review shading is approximate and is not suitable for final appearance approval.
+
+Install with `pnpm install --frozen-lockfile --ignore-scripts`, then `pnpm build`. The committed capture bundle is deployed by the existing GitHub Pages static hosting. See the [integration plan](docs/spatial-review-integration-plan.md) and [evidence and limitations](docs/spatial-review-evidence.md).
