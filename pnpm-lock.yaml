@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@alterno-dev/spatial-review':
-        specifier: 0.7.0
-        version: 0.7.0(three@0.180.0)
+        specifier: 0.8.0
+        version: 0.8.0(three@0.180.0)
       three:
         specifier: ^0.180.0
         version: 0.180.0
@@ -24,11 +24,11 @@ importers:
 
 packages:
 
-  '@alterno-dev/spatial-review-protocol@0.7.0':
-    resolution: {integrity: sha512-Mt+3bDo372GinpeE+QtZyFUfbWpQ5IN73G8BvQrShFzrR7RrOhCjLFbgImYRNWmR845ivq9e295ce4SMV/dyIg==}
+  '@alterno-dev/spatial-review-protocol@0.8.0':
+    resolution: {integrity: sha512-Z/ZcIhVz/w+/4K/D7NgkwgWa1bnoz0YFyfRoamOxg2qA4kbWiwppcVFNPGgDlsYAEvzqrMroLPHLmmsmTeNAXg==}
 
-  '@alterno-dev/spatial-review@0.7.0':
-    resolution: {integrity: sha512-tXHBn3XU8fMXhgCC87CwcMAbfG764qSJKSYTQaSigkjhOq4hhfgHVsDd7wFibS3M32tj//nnNoh+Gp5EyuKUqQ==}
+  '@alterno-dev/spatial-review@0.8.0':
+    resolution: {integrity: sha512-+1YX0sx84BF7b11o/JhIX9VeH3lSMnHLKaljFMYhxMee5UPalwqluB3I2aKkOM7gNcTE0nBcNsjOpsWGDBT8+g==}
     peerDependencies:
       three: '>=0.160.0 <1'
 
@@ -213,11 +213,11 @@ packages:
 
 snapshots:
 
-  '@alterno-dev/spatial-review-protocol@0.7.0': {}
+  '@alterno-dev/spatial-review-protocol@0.8.0': {}
 
-  '@alterno-dev/spatial-review@0.7.0(three@0.180.0)':
+  '@alterno-dev/spatial-review@0.8.0(three@0.180.0)':
     dependencies:
-      '@alterno-dev/spatial-review-protocol': 0.7.0
+      '@alterno-dev/spatial-review-protocol': 0.8.0
       three: 0.180.0
 
   '@esbuild/aix-ppc64@0.25.9':
