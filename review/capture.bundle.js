@@ -16341,7 +16341,7 @@ var reversedFuncs = {
   [GreaterEqualDepth]: LessEqualDepth
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/constants.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.9.0/node_modules/@alterno-dev/spatial-review-protocol/dist/constants.js
 var SPATIAL_REVIEW_INDEX_SCHEMA = "spatial-review-index/v1";
 var LEGACY_SPATIAL_REVIEW_INDEX_SCHEMA = "sole-review-index/v1";
 var ASSET_REVIEW_SCHEMA = "asset-review-3d/v1";
@@ -16372,7 +16372,7 @@ var LEGACY_SPATIAL_REVIEW_READY = "sole:scene-asset-registry:ready";
 var LEGACY_SPATIAL_REVIEW_REQUEST = "sole:scene-asset-registry:request";
 var LEGACY_SPATIAL_REVIEW_CATALOG = "sole:scene-asset-registry:catalog";
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/prepared-package.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.9.0/node_modules/@alterno-dev/spatial-review-protocol/dist/prepared-package.js
 var PREPARED_REVIEW_LIMITS = {
   manifestBytes: 4 * 1024 * 1024,
   catalogBytes: 24 * 1024 * 1024,
@@ -16382,7 +16382,7 @@ var PREPARED_REVIEW_LIMITS = {
 };
 var littleEndian = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/normalize.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.9.0/node_modules/@alterno-dev/spatial-review-protocol/dist/normalize.js
 function record(value, label) {
   if (!value || typeof value !== "object" || Array.isArray(value))
     throw new Error(`${label} must be a JSON object.`);
@@ -16432,11 +16432,11 @@ function normalizeSpatialReviewEditorOriginPolicy(value) {
   return { mode: policy.mode, ...policy.allowLoopbackPeers === void 0 ? {} : { allowLoopbackPeers: policy.allowLoopbackPeers } };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/editor.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.9.0/node_modules/@alterno-dev/spatial-review-protocol/dist/editor.js
 var OFFICIAL_SPATIAL_REVIEW_EDITOR_ORIGIN = "https://spatial-review.alterno.dev";
 var OFFICIAL_SPATIAL_REVIEW_EDITOR_URL = `${OFFICIAL_SPATIAL_REVIEW_EDITOR_ORIGIN}/review`;
 
-// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.8.0/node_modules/@alterno-dev/spatial-review-protocol/dist/scene-ownership.js
+// node_modules/.pnpm/@alterno-dev+spatial-review-protocol@0.9.0/node_modules/@alterno-dev/spatial-review-protocol/dist/scene-ownership.js
 var MAX_SCENE_ASSEMBLIES = 1e4;
 var MAX_OWNED_SCENE_ACTORS = 1e5;
 var MAX_SCENE_OWNERSHIP_DEPTH = 128;
@@ -16577,13 +16577,13 @@ function validateSceneOwnership(value) {
   return errors;
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/slug.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/slug.js
 function slugify(value, fallback = "item") {
   const slug = value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   return slug || fallback;
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/serializer.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/serializer.js
 function hex(color, fallback = "#8d8d88") {
   return color ? `#${color.getHexString()}` : fallback;
 }
@@ -16618,11 +16618,11 @@ function materialMaps(material, onTexture) {
     return [{ slot, name: texture.name || void 0, sourceRef, resourceId, wrap: texture.wrapS === RepeatWrapping || texture.wrapT === RepeatWrapping ? "repeat" : "clamp", repeat: [texture.repeat.x, texture.repeat.y], offset: [texture.offset.x, texture.offset.y], rotation: texture.rotation, flipY: texture.flipY }];
   });
 }
-function serializeMaterial(material, id2, index, maps, onTexture) {
+function serializeMaterial(material, id2, index, onTexture) {
   const value = material;
-  return { id: id2, name: material.name || `${material.type.replace(/Material$/, "")} ${index + 1}`, type: material.type.includes("Basic") ? "basic" : material.type.includes("Phong") ? "phong" : material.type.includes("Standard") ? "standard" : "unknown", color: hex(value.color), emissive: value.emissive ? hex(value.emissive, "#000000") : void 0, roughness: typeof value.roughness === "number" ? value.roughness : void 0, metalness: typeof value.metalness === "number" ? value.metalness : void 0, opacity: material.opacity, doubleSided: material.side === DoubleSide, wireframe: "wireframe" in material ? Boolean(material.wireframe) : false, maps: maps ? materialMaps(material, onTexture) : void 0 };
+  return { id: id2, name: material.name || `${material.type.replace(/Material$/, "")} ${index + 1}`, type: material.type.includes("Basic") ? "basic" : material.type.includes("Phong") ? "phong" : material.type.includes("Standard") ? "standard" : "unknown", color: hex(value.color), vertexColors: value.vertexColors, transparent: material.transparent, emissive: value.emissive ? hex(value.emissive, "#000000") : void 0, roughness: typeof value.roughness === "number" ? value.roughness : void 0, metalness: typeof value.metalness === "number" ? value.metalness : void 0, opacity: material.opacity, doubleSided: material.side === DoubleSide, wireframe: "wireframe" in material ? Boolean(material.wireframe) : false, maps: materialMaps(material, onTexture) };
 }
-function serializeGeometry(geometry, surface, compact = false) {
+function serializeGeometry(geometry, includeNormals, compact = false) {
   const positions = attributeArray(geometry.getAttribute("position"), compact);
   if (!positions?.length)
     return void 0;
@@ -16636,7 +16636,7 @@ function serializeGeometry(geometry, surface, compact = false) {
       throw new RangeError("Geometry groups must reference bounded draw ranges and material slots.");
     return { start: group.start, count: group.count, materialIndex };
   }) : void 0;
-  return { kind: "mesh", positions, indices, normals: surface ? attributeArray(geometry.getAttribute("normal"), compact) : void 0, uvs: surface ? attributeArray(geometry.getAttribute("uv"), compact) : void 0, groups };
+  return { kind: "mesh", positions, indices, normals: includeNormals ? attributeArray(geometry.getAttribute("normal"), compact) : void 0, uvs: attributeArray(geometry.getAttribute("uv"), compact), colors: attributeArray(geometry.getAttribute("color"), compact), groups };
 }
 function matrixTransform(matrix) {
   const position = new Vector3();
@@ -16658,7 +16658,7 @@ function assetFromObject3DRoots(roots, label, sourceRef, options = {}) {
   const nodes = [{ id: `${assetId}-root`, name: label.replace(/\.[^.]+$/, ""), type: "group", position: [0, 0, 0], rotation: [0, 0, 0], scale: [1, 1, 1], visible: true, materialIds: [], sourceRef }];
   const sourceMatrix = roots[0].matrixWorld.clone();
   const inverse = sourceMatrix.clone().invert();
-  const surface = options.profile !== "scene";
+  const includeNormals = options.profile !== "scene";
   let geometryGroupCount = 0;
   const materialIdFor = (material) => {
     const found = materialIds.get(material);
@@ -16667,14 +16667,14 @@ function assetFromObject3DRoots(roots, label, sourceRef, options = {}) {
     const index = materials.length;
     const id2 = `${assetId}-material-${slugify(material.name || material.type, "surface")}-${index + 1}`;
     materialIds.set(material, id2);
-    materials.push(serializeMaterial(material, id2, index, surface, options.onTexture));
+    materials.push(serializeMaterial(material, id2, index, options.onTexture));
     return id2;
   };
   const geometryIdFor = (geometry) => {
     const found = geometryIds.get(geometry);
     if (found)
       return found;
-    const value = serializeGeometry(geometry, surface, options.geometryEncoding === "typed");
+    const value = serializeGeometry(geometry, includeNormals, options.geometryEncoding === "typed");
     if (!value)
       return void 0;
     geometryGroupCount += value.kind === "mesh" ? value.groups?.length ?? 0 : 0;
@@ -16719,7 +16719,7 @@ function assetFromObject3DRoots(roots, label, sourceRef, options = {}) {
   return { id: assetId, name: label.replace(/\.[^.]+$/, ""), sourceRef, category: options.category ?? "Registered scene asset", tags: options.tags ?? ["registered", "scene-asset"], nodes, geometries, materials, sourceTransform: { position: sourceTransform.position.toArray(), rotation: sourceTransform.rotation, scale: sourceTransform.scale }, animations: options.animations, feedback: { status: "unreviewed", summary: "", annotations: [], modifications: [] } };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource.js
 function sourceReference(texture) {
   const image = texture.source?.data;
   return typeof texture.userData.sourceRef === "string" ? texture.userData.sourceRef : typeof texture.userData.requestUrl === "string" ? texture.userData.requestUrl : image?.currentSrc || image?.src;
@@ -16813,7 +16813,7 @@ async function readTextureResource(texture, maxBytes) {
   return { bytes: await blob.arrayBuffer(), contentType: blob.type || "image/png" };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/scene-cache.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/scene-cache.js
 var equal = (a, b) => a.length === b.length && a.every((value, index) => value === b[index]);
 var attributeKey = (attribute) => attribute ? `${attribute.count}:${attribute.itemSize}:${attribute.normalized}:${"data" in attribute ? attribute.data.version : attribute.version}` : "";
 var SceneGraphCache = class {
@@ -16899,7 +16899,7 @@ var SceneGraphCache = class {
     const materialKey = materials.map((material) => {
       const m = material;
       const textures = [m.map, m.normalMap, m.bumpMap, m.roughnessMap, m.metalnessMap, m.aoMap, m.emissiveMap, m.alphaMap].map((texture) => texture ? `${texture.uuid}:${texture.version}:${texture.repeat.toArray()}:${texture.offset.toArray()}:${texture.rotation}:${texture.wrapS}:${texture.wrapT}:${texture.flipY}` : "").join(";");
-      return `${textures}/${m.uuid}:${m.version}:${m.color?.getHex()}:${m.emissive?.getHex()}:${m.opacity}:${m.roughness}:${m.metalness}:${m.side}:${m.wireframe}`;
+      return `${textures}/${m.uuid}:${m.version}:${m.color?.getHex()}:${m.emissive?.getHex()}:${m.opacity}:${m.roughness}:${m.metalness}:${m.side}:${m.wireframe}:${m.vertexColors}`;
     }).join("|");
     const instances = object instanceof InstancedMesh ? `${object.count}:${object.instanceMatrix.version}` : "";
     const children = object.children.map((child) => this.inspect(child).revision);
@@ -16933,7 +16933,7 @@ var SceneGraphCache = class {
   }
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/assemblies.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/assemblies.js
 function transformMatrix(transform2) {
   return new Matrix4().compose(new Vector3(...transform2.position), new Quaternion().setFromEuler(new Euler(...transform2.rotation.map(MathUtils.degToRad), "XYZ")), new Vector3(...transform2.scale));
 }
@@ -17029,7 +17029,7 @@ function assembleScene(registrations, actors, hierarchical) {
   };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/geometry-transfer.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/geometry-transfer.js
 function enumerableDataEntries(value) {
   return Object.keys(value).map((key) => {
     const descriptor = Object.getOwnPropertyDescriptor(value, key);
@@ -17160,7 +17160,7 @@ function assetTransferBuffers(source) {
     if (!geometry || geometry.kind !== "mesh" || geometries.has(geometry))
       return;
     geometries.add(geometry);
-    for (const array of [geometry.positions, geometry.normals, geometry.uvs, geometry.indices]) {
+    for (const array of [geometry.positions, geometry.normals, geometry.uvs, geometry.colors, geometry.indices]) {
       if (array && ArrayBuffer.isView(array))
         buffers.add(array.buffer);
     }
@@ -17202,11 +17202,15 @@ function prepareAssetTransfer(source, maxBytes = 64 * 1024 * 1024, options = {})
     if (!geometry || geometry.kind !== "mesh" || seen.has(geometry))
       return;
     seen.add(geometry);
+    if (geometry.colors && (![geometry.positions.length, geometry.positions.length / 3 * 4].includes(geometry.colors.length) || !geometry.colors.every(Number.isFinite)))
+      throw new TypeError("Vertex colors must contain finite RGB or RGBA channels per vertex.");
     project(geometry.positions, geometry.positions.length * 4);
     if (geometry.normals)
       project(geometry.normals, geometry.normals.length * 4);
     if (geometry.uvs)
       project(geometry.uvs, geometry.uvs.length * 4);
+    if (geometry.colors)
+      project(geometry.colors, geometry.colors.length * 4);
     if (geometry.indices)
       project(geometry.indices, geometry.indices.length * (geometry.indices instanceof Uint16Array ? 2 : 4));
   };
@@ -17257,6 +17261,8 @@ function prepareAssetTransfer(source, maxBytes = 64 * 1024 * 1024, options = {})
       geometry.normals = Float32Array.from(geometry.normals);
     if (geometry.uvs)
       geometry.uvs = Float32Array.from(geometry.uvs);
+    if (geometry.colors)
+      geometry.colors = Float32Array.from(geometry.colors);
     if (geometry.indices)
       geometry.indices = geometry.indices instanceof Uint16Array ? Uint16Array.from(geometry.indices) : Uint32Array.from(geometry.indices);
   };
@@ -17283,7 +17289,7 @@ function prepareAssetTransfer(source, maxBytes = 64 * 1024 * 1024, options = {})
   return { asset, transfer: assetTransferBuffers(asset), bytes };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/registry.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/registry.js
 var MAX_DEFERRED_REPRESENTATION_CACHE_ENTRIES = 32;
 var MAX_DEFERRED_REPRESENTATION_CACHE_BYTES = 64 * 1024 * 1024;
 var MAX_DEFERRED_TEXTURE_RESOURCE_OWNERS = 64;
@@ -17755,14 +17761,18 @@ var SceneAssetRegistry = class {
     let bytes = 0;
     let triangles = 0;
     let instances = 0;
+    let colors = false;
     entry.roots.forEach((root) => root.traverse((object) => {
       const geometry = object.geometry;
       if (geometry && !seen.has(geometry)) {
         seen.add(geometry);
-        for (const name of profile === "scene" ? ["position"] : ["position", "normal", "uv"]) {
+        for (const name of profile === "scene" ? ["position", "uv", "color"] : ["position", "normal", "uv", "color"]) {
           const attribute = geometry.getAttribute(name);
-          if (attribute)
+          if (attribute) {
             bytes += attribute.count * attribute.itemSize * 4;
+            if (name === "color")
+              colors = true;
+          }
         }
         if (geometry.index) {
           bytes += geometry.index.count * (geometry.getAttribute("position")?.count <= 65535 ? 2 : 4);
@@ -17775,7 +17785,7 @@ var SceneAssetRegistry = class {
         bytes += object.count * 16 * instanceComponentBytes;
       }
     }));
-    return { bytes, triangles, instances };
+    return { bytes, triangles, instances, colors };
   }
   streamDescriptor(entry, profile) {
     if (isDeferred(entry))
@@ -17792,7 +17802,7 @@ var SceneAssetRegistry = class {
         estimatedBytes: Math.min(1024 * 1024 * 1024, estimate.bytes),
         triangles: estimate.triangles,
         instances: estimate.instances,
-        attributes: profile === "scene" ? ["position"] : ["position", "normal", "uv"]
+        attributes: [...profile === "scene" ? ["position", "uv"] : ["position", "normal", "uv"], ...estimate.colors ? ["color"] : []]
       }]
     };
   }
@@ -17932,23 +17942,23 @@ var SceneAssetRegistry = class {
         ownsTextureResources = resources.size > 0;
       } else
         asset = produced;
-      let prepared2;
+      let prepared;
       try {
         if (asset.id !== entry.assetId)
           throw new Error(`Deferred asset producer returned "${asset.id}" for requested asset "${entry.assetId}".`);
         reportProgress({ phase: "serializing" });
-        prepared2 = prepareAssetTransfer({ ...asset, stream }, maxBytes, { typedInstances: true });
+        prepared = prepareAssetTransfer({ ...asset, stream }, maxBytes, { typedInstances: true });
       } catch (error) {
         if (ownsTextureResources)
           this.releaseTextureResourceOwner(`deferred:${cacheKey}`);
         throw error;
       }
       this.unavailableDeferredRepresentations.delete(cacheKey);
-      const cacheEntry = { registration: entry, assetId: entry.assetId, asset: prepared2.asset, bytes: prepared2.bytes };
+      const cacheEntry = { registration: entry, assetId: entry.assetId, asset: prepared.asset, bytes: prepared.bytes };
       if (this.rememberDeferredRepresentation(cacheKey, cacheEntry)) {
         return this.useDeferredRepresentation(cacheKey, cacheEntry, representation, maxBytes);
       }
-      return { ...prepared2, representation };
+      return { ...prepared, representation };
     } else {
       if (this.estimateBytes(entry, profile, 4).bytes > maxBytes)
         throw new RangeError("The requested representation exceeds the negotiated geometry byte budget.");
@@ -18047,7 +18057,7 @@ var SceneAssetRegistry = class {
   }
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/origin-authorization.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/origin-authorization.js
 var AUTHORIZATION = Symbol("SpatialReviewEditorAuthorization");
 function canonicalConfiguredOrigin(value, label) {
   try {
@@ -18152,7 +18162,7 @@ function spatialReviewEditorOriginAllowed(authorization, producerOrigin, editorO
   return editor === producer || authorization.allowedOrigins.includes(editor) || authorization.allowOfficialEditor && editor === OFFICIAL_SPATIAL_REVIEW_EDITOR_ORIGIN || Boolean(authorization.allowOrigin?.(editor)) || authorization.allowLoopbackPeers && loopback(producer) && loopback(editor);
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/bridge.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/bridge.js
 var DEFAULT_MAX_RESOURCE_BYTES = 16 * 1024 * 1024;
 var DEFAULT_MAX_GEOMETRY_BYTES = 64 * 1024 * 1024;
 function positiveLimit(value, fallback, maximum = Number.MAX_SAFE_INTEGER) {
@@ -18412,8 +18422,8 @@ function attachSceneAssetRegistryBridge(registry2, options = {}) {
         if (!source)
           post(target, event.origin, { ...response, ok: false, error: "not-found" });
         else {
-          const prepared2 = prepareAssetTransfer(source, limit);
-          post(target, event.origin, { ...response, ok: true, asset: prepared2.asset }, prepared2.transfer);
+          const prepared = prepareAssetTransfer(source, limit);
+          post(target, event.origin, { ...response, ok: true, asset: prepared.asset }, prepared.transfer);
         }
       } catch (error) {
         post(target, event.origin, { ...response, ok: false, error: error instanceof RangeError ? "too-large" : "unavailable" });
@@ -18584,7 +18594,7 @@ function attachSceneAssetRegistryBridge(registry2, options = {}) {
   };
 }
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource-cache.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/resource-cache.js
 var ResourceCache = class {
   entries = /* @__PURE__ */ new Map();
   acquire(source, variant, create) {
@@ -18630,7 +18640,7 @@ var ResourceCache = class {
   }
 };
 
-// node_modules/.pnpm/@alterno-dev+spatial-review@0.8.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/runtime.js
+// node_modules/.pnpm/@alterno-dev+spatial-review@0.9.0_three@0.180.0/node_modules/@alterno-dev/spatial-review/dist/runtime.js
 var ThreeAssetResourceCache = class {
   geometries = new ResourceCache();
   materials = new ResourceCache();
@@ -29804,50 +29814,215 @@ function createReviewYield({ now = () => performance.now(), task = nextTask, bud
   };
 }
 
+// review/materials.js
+function usesProjectedTexture(material, geometry) {
+  const uniforms = material.userData?.uniforms || {};
+  return !(material.map && geometry.attributes.uv) && Boolean(uniforms.uRockA || uniforms.uDirtA);
+}
+function createReviewPreparation(yieldTask2) {
+  const prepared = /* @__PURE__ */ new Map();
+  const geometryCopies = /* @__PURE__ */ new Map();
+  const materialCopies = /* @__PURE__ */ new Map();
+  const alphaMaps = /* @__PURE__ */ new Map();
+  const ownedTextures = /* @__PURE__ */ new Set();
+  function alphaFor(texture, threshold) {
+    const key = `${texture.uuid}:${threshold}`;
+    if (alphaMaps.has(key)) return alphaMaps.get(key);
+    const image = texture.image;
+    const canvas = document.createElement("canvas");
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext("2d");
+    let data = image.data;
+    if (!data) {
+      context.drawImage(image, 0, 0);
+      data = context.getImageData(0, 0, image.width, image.height).data;
+    }
+    const pixels = new Uint8Array(image.width * image.height * 4);
+    for (let i = 0; i < pixels.length; i += 4) {
+      pixels[i] = pixels[i + 1] = pixels[i + 2] = data[i + 3] / 255 >= threshold ? 255 : 0;
+      pixels[i + 3] = 255;
+    }
+    const map = new DataTexture(pixels, image.width, image.height, RGBAFormat);
+    map.wrapS = texture.wrapS;
+    map.wrapT = texture.wrapT;
+    map.flipY = texture.flipY;
+    map.repeat.copy(texture.repeat);
+    map.needsUpdate = true;
+    map.name = `Source alpha threshold ${threshold}`;
+    alphaMaps.set(key, map);
+    ownedTextures.add(map);
+    return map;
+  }
+  async function geometryFor(mesh, signal) {
+    if (!usesProjectedTexture(mesh.material, mesh.geometry)) return mesh.geometry;
+    const rock = Boolean(mesh.material.userData.uniforms.uIron);
+    const key = `${mesh.geometry.uuid}:${rock}:${mesh.matrixWorld.elements.join(",")}`;
+    if (geometryCopies.has(key)) return geometryCopies.get(key);
+    const geometry = mesh.geometry.clone();
+    try {
+      const p = geometry.attributes.position, n = geometry.attributes.normal;
+      const uv = new Float32Array(p.count * 2), v = new Vector3();
+      for (let i = 0; i < p.count; i++) {
+        if (i % 8192 === 0) {
+          signal.throwIfAborted();
+          await yieldTask2();
+        }
+        v.fromBufferAttribute(p, i).applyMatrix4(mesh.matrixWorld);
+        let a = 0, b = 2;
+        if (rock && n) {
+          const nx = Math.abs(n.getX(i)), ny = Math.abs(n.getY(i)), nz = Math.abs(n.getZ(i));
+          if (nx > ny && nx > nz) {
+            a = 2;
+            b = 1;
+          } else if (nz > ny) {
+            a = 0;
+            b = 1;
+          }
+        }
+        const scale = rock ? 0.0715 : 0.3846;
+        uv[i * 2] = v.getComponent(a) * scale;
+        uv[i * 2 + 1] = v.getComponent(b) * scale;
+      }
+      geometry.setAttribute("uv", new BufferAttribute(uv, 2));
+      signal.throwIfAborted();
+      geometryCopies.set(key, geometry);
+      return geometry;
+    } catch (error) {
+      geometry.dispose();
+      throw error;
+    }
+  }
+  function materialFor(mesh, geometry) {
+    const m = mesh.material, u = m.userData?.uniforms || {};
+    const key = `${mesh.uuid}:${Boolean(geometry.attributes.uv)}`;
+    if (materialCopies.has(key)) return materialCopies.get(key);
+    const out = new MeshStandardMaterial({
+      name: `${m.name || mesh.name} \u2014 review shading approximation`,
+      color: u.uIron?.value || m.color || new Color(12030056),
+      roughness: m.roughness ?? 1,
+      metalness: m.metalness ?? 0,
+      side: m.side,
+      transparent: m.transparent,
+      opacity: m.opacity,
+      alphaTest: m.alphaTest || 0,
+      // A color attribute can hold shader masks. Preserve the source opt-in.
+      vertexColors: m.vertexColors === true,
+      emissive: m.emissive || 0,
+      emissiveIntensity: m.emissiveIntensity ?? 1
+    });
+    for (const slot of ["map", "normalMap", "roughnessMap", "metalnessMap", "aoMap", "alphaMap", "emissiveMap"]) {
+      if (m[slot] && geometry.attributes.uv) out[slot] = m[slot];
+    }
+    if (!out.map && (u.uRockA || u.uDirtA)) out.map = (u.uRockA && u.uIron ? u.uRockA : u.uDirtA || u.uRockA).value;
+    if (m.alphaTest > 0 && out.map) {
+      out.alphaMap = alphaFor(out.map, m.alphaTest);
+      out.transparent = true;
+    }
+    if (m.normalScale) out.normalScale.copy(m.normalScale);
+    materialCopies.set(key, out);
+    return out;
+  }
+  async function prepare2(roots, signal) {
+    if (prepared.has(roots)) return prepared.get(roots);
+    const result = [];
+    for (const source of roots) {
+      signal.throwIfAborted();
+      await yieldTask2();
+      source.updateMatrixWorld(true);
+      const clone = source.clone(true);
+      result.push(clone);
+      const originals = [], clones = [];
+      source.traverse((o) => originals.push(o));
+      clone.traverse((o) => clones.push(o));
+      for (let i = 0; i < clones.length; i++) {
+        const copy = clones[i], sourceMesh = originals[i];
+        if (!copy.isMesh) continue;
+        signal.throwIfAborted();
+        await yieldTask2();
+        copy.geometry = await geometryFor(sourceMesh, signal);
+        copy.material = materialFor(sourceMesh, copy.geometry);
+      }
+    }
+    signal.throwIfAborted();
+    prepared.set(roots, result);
+    return result;
+  }
+  function dispose() {
+    for (const material of materialCopies.values()) material.dispose();
+    for (const geometry of geometryCopies.values()) geometry.dispose();
+    for (const texture of ownedTextures) texture.dispose();
+    materialCopies.clear();
+    geometryCopies.clear();
+    ownedTextures.clear();
+    prepared.clear();
+    alphaMaps.clear();
+  }
+  return { prepare: prepare2, dispose };
+}
+
 // review/stream-estimates.js
 function measureStreamRepresentations(roots) {
-  let sceneBytes = 0;
-  let detailBytes = 0;
-  let triangles = 0;
-  let instances = 0;
-  let nodes = 0;
-  for (const root of roots) root.traverse((object) => {
-    nodes++;
-    const geometry = object.geometry;
-    if (!geometry?.getAttribute("position")) return;
-    const count = geometry.getAttribute("position").count;
-    const copies = object.isInstancedMesh ? object.count : 1;
-    triangles += Math.floor((geometry.index?.count ?? count) / 3) * copies;
-    if (object.isInstancedMesh) {
-      instances += object.count;
-      sceneBytes += object.count * 16 * 4;
-      detailBytes += object.count * 16 * 4;
-    }
-    const positions = count * 3 * 4;
-    const indices = (geometry.index?.count ?? 0) * (count <= 65535 ? 2 : 4);
-    sceneBytes += positions + indices;
-    detailBytes += positions + indices + count * (3 + 2) * 4;
-  });
+  let sceneBytes = 0, detailBytes = 0, triangles = 0, instances = 0, nodes = 0;
+  const seen = /* @__PURE__ */ new Set();
+  const sceneAttributes = /* @__PURE__ */ new Set(["position"]);
+  const detailAttributes = /* @__PURE__ */ new Set(["position"]);
+  for (const root of roots) {
+    root.updateMatrixWorld(true);
+    root.traverse((object) => {
+      nodes++;
+      const geometry = object.geometry;
+      const position = geometry?.getAttribute("position");
+      if (!position) return;
+      const count = position.count;
+      const copies = object.isInstancedMesh ? object.count : 1;
+      triangles += Math.floor((geometry.index?.count ?? count) / 3) * copies;
+      if (object.isInstancedMesh) {
+        instances += object.count;
+        const bytes = object.count * 16 * 4 + (object.instanceColor ? object.count * object.instanceColor.itemSize * 4 : 0);
+        sceneBytes += bytes;
+        detailBytes += bytes;
+      }
+      const projected = usesProjectedTexture(object.material, geometry);
+      const key = projected ? `${geometry.uuid}:${Boolean(object.material.userData.uniforms.uIron)}:${object.matrixWorld.elements.join(",")}` : geometry.uuid;
+      if (seen.has(key)) return;
+      seen.add(key);
+      const uv = projected || Boolean(geometry.getAttribute("uv"));
+      const normal = Boolean(geometry.getAttribute("normal"));
+      const color = geometry.getAttribute("color");
+      const colors = color ? count * color.itemSize * 4 : 0;
+      const base = count * 3 * 4 + (geometry.index?.count ?? 0) * (count <= 65535 ? 2 : 4) + (uv ? count * 2 * 4 : 0) + colors;
+      sceneBytes += base;
+      detailBytes += base + (normal ? count * 3 * 4 : 0);
+      if (uv) {
+        sceneAttributes.add("uv");
+        detailAttributes.add("uv");
+      }
+      if (normal) detailAttributes.add("normal");
+      if (color) {
+        sceneAttributes.add("color");
+        detailAttributes.add("color");
+      }
+    });
+  }
   const reserve = (bytes) => Math.ceil(bytes * 1.25 + 65536 + nodes * 1024);
   return {
     triangles,
     instances,
     sceneBytes: reserve(sceneBytes),
-    detailBytes: reserve(detailBytes)
+    detailBytes: reserve(detailBytes),
+    sceneAttributes: [...sceneAttributes],
+    detailAttributes: [...detailAttributes]
   };
 }
 
 // review/capture.js
 var yieldTask = createReviewYield();
 var identity = { position: [0, 0, 0], rotation: [0, 0, 0], scale: [1, 1, 1] };
-var registry = new SceneAssetRegistry("sedona-fresh-492cae84f76de94f");
-var prepared = /* @__PURE__ */ new Map();
-var alphaMaps = /* @__PURE__ */ new Map();
-var ownedTextures = /* @__PURE__ */ new Set();
+var registry = new SceneAssetRegistry("sedona-fresh-303c02a951e86bd0");
+var { prepare, dispose: disposePreparation } = createReviewPreparation(yieldTask);
 var phases = [];
 var sources = [];
-var ownedMaterials = /* @__PURE__ */ new Set();
-var ownedGeometries = /* @__PURE__ */ new Set();
 async function phase(name, build) {
   document.querySelector("#status").textContent = name;
   await yieldTask();
@@ -29871,128 +30046,20 @@ applyScour(ground, terrain);
 var juniper = await phase("Building hero juniper", () => buildJuniper(terrain, tex));
 var vegetation = await phase("Building vegetation", () => buildVegetation(path, terrain, [...walls, ...buttes, ...talus]));
 registry.registerAssembly({ assemblyId: "sedona-world", name: "Sedona wash and surroundings", sourceRef: "src/main.js#scene", localTransform: identity });
-function alphaFor(texture, threshold) {
-  const key = texture.uuid + ":" + threshold;
-  if (alphaMaps.has(key)) return alphaMaps.get(key);
-  const image = texture.image, canvas = document.createElement("canvas");
-  canvas.width = image.width;
-  canvas.height = image.height;
-  const context = canvas.getContext("2d");
-  let data;
-  if (image.data) data = image.data;
-  else {
-    context.drawImage(image, 0, 0);
-    data = context.getImageData(0, 0, image.width, image.height).data;
-  }
-  const pixels = new Uint8Array(image.width * image.height * 4);
-  for (let i = 0; i < pixels.length; i += 4) {
-    pixels[i] = pixels[i + 1] = pixels[i + 2] = data[i + 3] / 255 >= threshold ? 255 : 0;
-    pixels[i + 3] = 255;
-  }
-  const map = new DataTexture(pixels, image.width, image.height, RGBAFormat);
-  map.wrapS = texture.wrapS;
-  map.wrapT = texture.wrapT;
-  map.flipY = texture.flipY;
-  map.repeat.copy(texture.repeat);
-  map.needsUpdate = true;
-  map.name = "Source alpha threshold " + threshold;
-  alphaMaps.set(key, map);
-  ownedTextures.add(map);
-  return map;
-}
-async function materialFor(mesh, geo, signal) {
-  const m = mesh.material, u = m.userData?.uniforms || {};
-  const color = u.uIron?.value || m.color || new Color(12030056);
-  const out = new MeshStandardMaterial({ name: (m.name || mesh.name) + " \u2014 review shading approximation", color, roughness: m.roughness ?? 1, metalness: m.metalness ?? 0, side: m.side, transparent: m.transparent, opacity: m.opacity, alphaTest: m.alphaTest || 0, vertexColors: !!geo.attributes.color });
-  for (const slot of ["map", "normalMap", "roughnessMap", "metalnessMap", "aoMap", "alphaMap", "emissiveMap"]) if (m[slot] && geo.attributes.uv) out[slot] = m[slot];
-  if (!out.map && (u.uRockA || u.uDirtA)) {
-    out.map = (u.uRockA && u.uIron ? u.uRockA : u.uDirtA || u.uRockA).value;
-    const p = geo.attributes.position, n = geo.attributes.normal, uv = new Float32Array(p.count * 2), v = new Vector3();
-    for (let i = 0; i < p.count; i++) {
-      if (i % 8192 === 0) {
-        signal.throwIfAborted();
-        await yieldTask();
-      }
-      v.fromBufferAttribute(p, i).applyMatrix4(mesh.matrixWorld);
-      let a = 0, b = 2;
-      if (u.uIron && n) {
-        const nx = Math.abs(n.getX(i)), ny = Math.abs(n.getY(i)), nz = Math.abs(n.getZ(i));
-        if (nx > ny && nx > nz) {
-          a = 2;
-          b = 1;
-        } else if (nz > ny) {
-          a = 0;
-          b = 1;
-        }
-      }
-      const scale = u.uIron ? 0.0715 : 0.3846;
-      uv[i * 2] = v.getComponent(a) * scale;
-      uv[i * 2 + 1] = v.getComponent(b) * scale;
-    }
-    geo.setAttribute("uv", new BufferAttribute(uv, 2));
-  }
-  if (m.alphaTest > 0 && out.map) {
-    out.alphaMap = alphaFor(out.map, m.alphaTest);
-    out.transparent = true;
-  }
-  if (m.normalScale) out.normalScale.copy(m.normalScale);
-  ownedMaterials.add(out);
-  return out;
-}
-async function prepare(roots, signal) {
-  if (prepared.has(roots)) return prepared.get(roots);
-  const result = [], allocated = [];
-  try {
-    for (const source of roots) {
-      signal.throwIfAborted();
-      await yieldTask();
-      source.updateMatrixWorld(true);
-      const clone = source.clone(true);
-      result.push(clone);
-      const originals = [], clones = [];
-      source.traverse((o) => originals.push(o));
-      clone.traverse((o) => clones.push(o));
-      for (let i = 0; i < clones.length; i++) {
-        const o = clones[i], src = originals[i];
-        if (!o.isMesh) continue;
-        signal.throwIfAborted();
-        await yieldTask();
-        o.geometry = src.geometry.clone();
-        ownedGeometries.add(o.geometry);
-        allocated.push({ geometry: o.geometry });
-        o.material = await materialFor(src, o.geometry, signal);
-        allocated.at(-1).material = o.material;
-      }
-    }
-    signal.throwIfAborted();
-    prepared.set(roots, result);
-    return result;
-  } catch (error) {
-    for (const item of allocated) {
-      item.geometry.dispose();
-      ownedGeometries.delete(item.geometry);
-      if (item.material) {
-        item.material.dispose();
-        ownedMaterials.delete(item.material);
-      }
-    }
-    throw error;
-  }
-}
 function register(id2, name, roots, sourceRef, category) {
   const bounds = new Box3();
   for (const root of roots) {
     root.updateMatrixWorld(true);
     bounds.expandByObject(root, true);
   }
-  const { triangles, instances, sceneBytes, detailBytes } = measureStreamRepresentations(roots);
+  const { triangles, instances, sceneBytes, detailBytes, sceneAttributes, detailAttributes } = measureStreamRepresentations(roots);
   const position = new Vector3(), quaternion = new Quaternion(), scale = new Vector3();
   roots[0].matrixWorld.decompose(position, quaternion, scale);
   const rotation = new Euler().setFromQuaternion(quaternion, "XYZ");
   const transform2 = { position: position.toArray(), rotation: [rotation.x, rotation.y, rotation.z].map(MathUtils.radToDeg), scale: scale.toArray() };
   const center = bounds.getCenter(new Vector3()).toArray(), size = bounds.getSize(new Vector3()).toArray();
   sources.push({ id: id2, name, sourceRef, roots: roots.map((r) => r.name), triangles, instances, sceneBytes, detailBytes, bounds: { center, size } });
-  registry.registerDeferred({ actorId: id2, assetId: id2, name, sourceRef, category, parentAssemblyId: "sedona-world", transform: transform2, bounds: { center, size }, tags: ["authoritative-geometry", "approximate-shading"], stream: { capability: SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY, revision: "sedona-fresh-492cae84f76de94f-" + id2, representations: [{ id: "detail", purpose: "detail", revision: "sedona-fresh-492cae84f76de94f-" + id2 + "-detail", estimatedBytes: detailBytes, triangles, instances, attributes: ["position", "normal", "uv"], geometricError: 0 }, { id: "overview", purpose: "overview", revision: "sedona-fresh-492cae84f76de94f-" + id2 + "-overview", estimatedBytes: sceneBytes, triangles, instances, attributes: ["position"], geometricError: 0 }] }, async produceRepresentation({ signal, reportProgress }) {
+  registry.registerDeferred({ actorId: id2, assetId: id2, name, sourceRef, category, parentAssemblyId: "sedona-world", transform: transform2, bounds: { center, size }, tags: ["authoritative-geometry", "approximate-shading"], stream: { capability: SPATIAL_REVIEW_ASSET_STREAM_CAPABILITY, revision: "sedona-fresh-303c02a951e86bd0-" + id2, representations: [{ id: "detail", purpose: "detail", revision: "sedona-fresh-303c02a951e86bd0-" + id2 + "-detail", estimatedBytes: detailBytes, triangles, instances, attributes: detailAttributes, geometricError: 0 }, { id: "overview", purpose: "overview", revision: "sedona-fresh-303c02a951e86bd0-" + id2 + "-overview", estimatedBytes: sceneBytes, triangles, instances, attributes: sceneAttributes, geometricError: 0 }] }, async produceRepresentation({ signal, reportProgress }) {
     reportProgress({ phase: "generating", completed: 0, total: roots.length });
     const result = await prepare(roots, signal);
     reportProgress({ phase: "generating", completed: roots.length, total: roots.length });
@@ -30018,14 +30085,7 @@ registry.registerNavigationSequence({ id: "wash-keyboard-viewpoints", name: "Key
 var detach = attachSceneAssetRegistryBridge(registry, { allowOfficialEditor: true, allowLoopbackPeers: true, allowedOrigins: [], maxGeometryBytes: 64 * 1024 * 1024, maxConcurrentAssetRequests: 1, maxInFlightBytes: 64 * 1024 * 1024, maxQueuedAssetRequests: 24 });
 var teardown = () => {
   detach();
-  for (const m of ownedMaterials) m.dispose();
-  for (const g of ownedGeometries) g.dispose();
-  ownedMaterials.clear();
-  ownedGeometries.clear();
-  prepared.clear();
-  for (const t of ownedTextures) t.dispose();
-  ownedTextures.clear();
-  alphaMaps.clear();
+  disposePreparation();
 };
 addEventListener("pagehide", teardown, { once: true });
 window.__sedonaReview = { registry, sources, phases, stops, teardown };

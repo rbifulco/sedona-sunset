@@ -27,5 +27,6 @@ test('the fallback yields to a real task without clamped timers and closes its p
   await pending; assert.deepEqual(order, ['microtask', 'task']);
   const capture = await readFile(new URL('../review/capture.js', import.meta.url), 'utf8');
   assert.match(capture, /const yieldTask=createReviewYield\(\)/);
-  assert.match(capture, /signal.throwIfAborted\(\);await yieldTask\(\)/);
+  const materials = await readFile(new URL('../review/materials.js', import.meta.url), 'utf8');
+  assert.match(materials, /signal.throwIfAborted\(\);\s*await yieldTask\(\)/);
 });
