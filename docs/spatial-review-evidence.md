@@ -1,3 +1,64 @@
+# Spatial Review 0.9.0 verification — 2026-10-24
+
+## Published revision
+
+- Site: https://rbifulco.github.io/sedona-sunset/
+- Capture: https://rbifulco.github.io/sedona-sunset/review/capture.html
+- Branch: `spatial-review/fresh-install`.
+- Source commit: `3dd92f5681e645bf3c19c378dcd210ed329842c6`.
+- Pages workflow: https://github.com/rbifulco/sedona-sunset/actions/runs/40123846075 — successful.
+- Hosted capture identity, verified from the served bundle: `sedona-fresh-303c02a951e86bd0`.
+- Installed SDK and transitive protocol: **0.9.0**. Three.js remains **0.180.0**. No CLI or validator is directly declared.
+
+The existing pnpm manager, lockfile, publication branch and legacy branch Pages workflow are retained. The tracked capture bundle was regenerated. The content-derived build identity includes the lockfile. Approved origins, capture route, 20 actor/asset targets, one owner, and ten keyboard viewpoint stops are unchanged.
+
+## Checks
+
+Before upgrading, all four existing review tests and the production capture build passed. After upgrading, all five review tests pass (`pnpm test:review`); `pnpm build` regenerates the bundle. The tests cover RGB/RGBA and UV serialization in both profiles, source vertex-color opt-in, geometry/texture sharing, transfer estimates, and the former component/material feedback identities and node-to-material links.
+
+`node tools/gate.mjs --preflight --allow-dirty` passes source parsing, module evaluation, shader source checks, scene construction and walking confinement. This is preflight only; the original full GPU visual gate was not run. Ordinary `index.html` and `src/` are unchanged, and no review work runs on the ordinary route, so the integration performance screen is not triggered. This source-level isolation is not a new visual-baseline comparison.
+
+## Representative resource measurement
+
+A real Chromium capture on the test host produced `hero-juniper`, mapped to `src/juniper.js#buildJuniper`, in Scene and Asset profiles. This was a **local direct-capture measurement**, not an official-editor visual acceptance result. There were no page errors. The hosted bundle has the same capture build identity.
+
+| Resource | Scene overview | Asset detail |
+| --- | ---: | ---: |
+| Geometry/protocol transfer | 1,556,792 bytes | 2,012,528 bytes |
+| Advertised geometry estimate | 1,985,697 bytes | 2,555,367 bytes |
+| Unique vertices | 37,978 | 37,978 |
+| Geometries | 4 | 4 |
+| Geometries retaining RGB | 3 | 3 |
+| Geometries retaining UVs | 4 | 4 |
+| Materials / map slots | 4 / 8 | 4 / 8 |
+
+The eight unique generated texture resources all transferred as PNG and decoded successfully. They total **6,212,919 bytes** of PNG payload and **13,631,488 bytes (13 MiB)** of decoded RGBA8 storage: four 512×512 images, two 1024×1024 images, and two 512×256 images. A full RGBA8 mip-chain estimate is about **17.33 MiB**; this is not measured GPU or process memory. Texture transfer, decoding, and GPU storage are separate from geometry bytes. Shared resources are counted once per unique resource.
+
+The complete catalog advertises 59,988,823 bytes of cumulative Scene geometry work and 77,707,438 bytes of cumulative Asset detail work, not one monolithic allocation. Each request remains capped at 64 MiB. The local source-generation phases totaled 74.7 seconds on this Linux test host; this is not a production performance figure.
+
+## Hosted editor acceptance remains blocked
+
+The current official editor was started from the ordinary website URL. Its landing flow stopped with:
+
+> The website did not provide its live scene catalog.
+
+A targeted read-only attempt at the canonical Hero Juniper Asset URL,
+https://spatial-review.alterno.dev/at/rbifulco.github.io/sedona-sunset/?view=asset&asset=hero-juniper,
+reported that the website did not provide its asset catalog. The error appeared around 60–90 seconds. The editor discarded the capture iframe, leaving no completed frame available for a normal Retry. Zero catalog, asset, or texture responses were observed by the editor, with no page, console, or network exception recorded by the final diagnostic.
+
+The slow capture bootstrap is consistent with the observed local generation time, but these observations do not prove the cause of the editor timeout. **Hosted Scene, Asset, and Experience visual acceptance remains unverified for this revision.** The direct capture result must not be presented as a substitute. No test feedback notes, source operations, origin changes, or unrelated editor state were created. All test browser contexts were closed.
+
+## Appearance and identity limits
+
+Source `vertexColors` flags are preserved; color attributes are not enabled as arbitrary RGB tints. Visible baked juniper/far-ridge/vegetation color and AO can now survive both profiles. Geometry and textures remain shared; capture-only UV projection allocates separate geometry only for distinct world-projection variants. Existing per-renderable material feedback descriptors keep their original names and identity. Canonical geometry-resource references can change without changing actor, asset, component or material feedback targets.
+
+Custom terrain/rock projection still approximates procedural blending, warped strata and erosion. Alpha-map blending differs from source alphaTest. Custom shader injection, source normalScale, per-instance tint, wind, lighting, atmosphere and post-processing are not faithfully reproduced. Final appearance decisions still require the ordinary website.
+
+
+---
+
+## Historical September acceptance (does not verify the 0.9.0 build)
+
 # Fresh integration evidence
 
 The deployment and hash below describe the September 4 publication. The
